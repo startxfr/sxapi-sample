@@ -1,6 +1,6 @@
 mysql:
   image: startx/sxapi:latest
-  container_name: "sxapi-sample-db-mysql-dev"
+  container_name: "sxapi-sample-db-mysql-master"
   cpu_shares: 4096
   mem_limit: 1g
   memswap_limit: 1g

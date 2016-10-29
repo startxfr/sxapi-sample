@@ -1,7 +1,7 @@
 {
     "name": "sxapi-sample-simple-full",
-    "description": "sxapi simple sample with various kind of response all packaged into one service (dev). Display a static or simple dynamic content",
-    "version": "dev",
+    "description": "sxapi simple sample with various kind of response all packaged into one service (master). Display a static or simple dynamic content",
+    "version": "master",
     "debug": true,
     "session": {},
     "plugins": [

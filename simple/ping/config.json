@@ -1,7 +1,7 @@
 {
     "name": "sxapi-sample-simple-ping",
-    "description": "sxapi simple sample ping response (dev). Display a dynamic json response to a ping",
-    "version": "dev",
+    "description": "sxapi simple sample ping response (master). Display a dynamic json response to a ping",
+    "version": "master",
     "debug": true,
     "session": {},
     "plugins": [

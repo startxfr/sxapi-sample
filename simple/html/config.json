@@ -1,7 +1,7 @@
 {
     "name": "sxapi-sample-simple-html",
-    "description": "sxapi simple sample html response (dev). Display a static html document",
-    "version": "dev",
+    "description": "sxapi simple sample html response (master). Display a static html document",
+    "version": "master",
     "debug": true,
     "session": {},
     "plugins": [

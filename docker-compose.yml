@@ -2,47 +2,47 @@ simple-full:
   extends:
     file: simple/docker-compose.yml
     service: "simple-full"
-  container_name: "sxapi-sample-simple-full-dev"
+  container_name: "sxapi-sample-simple-full-master"
 
 simple-hello:
   extends:
     file: simple/docker-compose.yml
     service: "simple-hello"
-  container_name: "sxapi-sample-simple-hello-dev"
+  container_name: "sxapi-sample-simple-hello-master"
   
 simple-html:
   extends:
     file: simple/docker-compose.yml
     service: "simple-html"
-  container_name: "sxapi-sample-simple-html-dev"
+  container_name: "sxapi-sample-simple-html-master"
   
 simple-json:
   extends:
     file: simple/docker-compose.yml
     service: "simple-json"
-  container_name: "sxapi-sample-simple-json-dev"
+  container_name: "sxapi-sample-simple-json-master"
   
 simple-module:
   extends:
     file: simple/docker-compose.yml
     service: "simple-module"
-  container_name: "sxapi-sample-simple-module-dev"
+  container_name: "sxapi-sample-simple-module-master"
   
 simple-ping:
   extends:
     file: simple/docker-compose.yml
     service: "simple-ping"
-  container_name: "sxapi-sample-simple-ping-dev"
+  container_name: "sxapi-sample-simple-ping-master"
   
 simple-txt:
   extends:
     file: simple/docker-compose.yml
     service: "simple-txt"
-  container_name: "sxapi-sample-simple-txt-dev"
+  container_name: "sxapi-sample-simple-txt-master"
   
 
 db-mysql:
   extends:
     file: db/docker-compose.yml
     service: "db-mysql"
-  container_name: "sxapi-sample-db-mysql-dev"
+  container_name: "sxapi-sample-db-mysql-master"
