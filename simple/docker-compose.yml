@@ -1,6 +1,6 @@
 simple:
-  image: startx/sxapi:latest
-  container_name: "sxapi-sample-simple-latest"
+  image: startx/sxapi:0.0.3
+  container_name: "sxapi-sample-simple-0.0.3"
   cpu_shares: 4096
   cpuset: "0"
   mem_limit: 1g
