@@ -1,0 +1,12 @@
+module:
+  image: startx/sxapi:latest
+  container_name: "sxapi-sample-simple-module-master"
+  cpu_shares: 4096
+  mem_limit: 1g
+  memswap_limit: 1g
+  restart: "on-failure:2"
+  ports:
+    - "19604:19777"
+  volumes:
+    - "~/sxapi-data:/data"
+    - "./:/conf"

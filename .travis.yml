@@ -1,0 +1,11 @@
+language: python
+python:
+  - "3.4"
+install: "pip install ."
+
+services:
+  - docker
+
+# command to run tests
+script: ./ci-tests.sh
+
