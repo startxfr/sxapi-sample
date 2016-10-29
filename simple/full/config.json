@@ -20,7 +20,7 @@
         "endpoints": [
             {
                 "path": "/",
-                "body": "<html><head></head><body><h1>Registry API for the Tempo project</h1></body></html>"
+                "body": "<html><head></head><body><h1>SXAPI simple response catalog</h1></body></html>"
             },
             {
                 "path": "/ping",
@@ -31,8 +31,8 @@
                 "body": "{\"health\":\"good\"}"
             },
             {
-                "path": "/toto",
-                "body": "<html><head></head><body><h1>TOTOT</h1></body></html>"
+                "path": "/html",
+                "body": "<html><head></head><body><h1>Static html content</h1></body></html>"
             },
             {
                 "path": "/txt",
@@ -40,7 +40,7 @@
                 "header": {
                     "Content-Type": "text/plain"
                 },
-                "body": "blabla"
+                "body": "text response"
             },
             {
                 "path": "/json",
@@ -54,18 +54,6 @@
                 "path": "/function",
                 "handler": "$ws.dynamicRequestHandlerTest",
                 "param_sample": "value de param_sample"
-            },
-            {
-                "path": "/auth",
-                "method": "POST",
-                "handler": "process.$api.authEndpoint",
-                "hashAlgorithm": "sha256",
-                "digest": "base64"
-            },
-            {
-                "path": "/session",
-                "method": "GET",
-                "handler": "process.$api.sessionEndpoint"
             }
         ]
     }

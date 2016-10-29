@@ -1,7 +1,48 @@
-simple:
+simple-full:
   extends:
     file: simple/docker-compose.yml
-    service: "simple"
-  container_name: "sxapi-sample-simple"
-  ports:
-    - "1970:19777"
+    service: "simple-full"
+  container_name: "sxapi-sample-simple-full-dev"
+
+simple-hello:
+  extends:
+    file: simple/docker-compose.yml
+    service: "simple-hello"
+  container_name: "sxapi-sample-simple-hello-dev"
+  
+simple-html:
+  extends:
+    file: simple/docker-compose.yml
+    service: "simple-html"
+  container_name: "sxapi-sample-simple-html-dev"
+  
+simple-json:
+  extends:
+    file: simple/docker-compose.yml
+    service: "simple-json"
+  container_name: "sxapi-sample-simple-json-dev"
+  
+simple-module:
+  extends:
+    file: simple/docker-compose.yml
+    service: "simple-module"
+  container_name: "sxapi-sample-simple-module-dev"
+  
+simple-ping:
+  extends:
+    file: simple/docker-compose.yml
+    service: "simple-ping"
+  container_name: "sxapi-sample-simple-ping-dev"
+  
+simple-txt:
+  extends:
+    file: simple/docker-compose.yml
+    service: "simple-txt"
+  container_name: "sxapi-sample-simple-txt-dev"
+  
+
+db-mysql:
+  extends:
+    file: db/docker-compose.yml
+    service: "db-mysql"
+  container_name: "sxapi-sample-db-mysql-dev"
