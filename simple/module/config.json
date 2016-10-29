@@ -1,0 +1,28 @@
+{
+    "name": "sxapi-sample-simple-module",
+    "description": "sxapi simple sample response from a module (dev). Display a dynamic json response",
+    "version": "dev",
+    "debug": true,
+    "session": {},
+    "plugins": [
+    ],
+    "log": {
+        "filters": {
+            "level": "0,1,2,3,4",
+            "type": "debug,info,error,warn"
+        }
+    },
+    "server": {
+        "type": "express",
+        "port": "19777",
+        "bodyParserJson": true,
+        "bodyParserUrl": true,
+        "endpoints": [
+            {
+                "path": "/function",
+                "handler": "$ws.dynamicRequestHandlerTest",
+                "param_sample": "value de param_sample"
+            }
+        ]
+    }
+}

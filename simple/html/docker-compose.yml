@@ -1,0 +1,12 @@
+html:
+  image: startx/sxapi:latest
+  container_name: "sxapi-sample-simple-html-dev"
+  cpu_shares: 4096
+  mem_limit: 1g
+  memswap_limit: 1g
+  restart: "on-failure:2"
+  ports:
+    - "19602:19777"
+  volumes:
+    - "~/sxapi-data:/data"
+    - "./:/conf"

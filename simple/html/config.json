@@ -1,0 +1,30 @@
+{
+    "name": "sxapi-sample-simple-html",
+    "description": "sxapi simple sample html response (dev). Display a static html document",
+    "version": "dev",
+    "debug": true,
+    "session": {},
+    "plugins": [
+    ],
+    "log": {
+        "filters": {
+            "level": "0,1,2,3,4",
+            "type": "debug,info,error,warn"
+        }
+    },
+    "server": {
+        "type": "express",
+        "port": "19777",
+        "bodyParserJson": false,
+        "bodyParserUrl": true,
+        "endpoints": [
+            {
+                "path": "/",
+                "header": {
+                    "Content-Type": "text/html"
+                },
+                "body": "<html><head></head><body><h1>Static html content</h1></body></html>"
+            }
+        ]
+    }
+}
