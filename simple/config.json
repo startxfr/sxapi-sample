@@ -1,0 +1,72 @@
+{
+    "name": "sxapi-sample-simple",
+    "description": "sxapi simple sample version 0.0.1",
+    "version": "0.0.1",
+    "debug": true,
+    "session": {},
+    "plugins": [
+    ],
+    "log": {
+        "filters": {
+            "level": "0,1,2,3,4",
+            "type": "debug,info,error,warn"
+        }
+    },
+    "server": {
+        "type": "express",
+        "port": "19777",
+        "bodyParserJson": true,
+        "bodyParserUrl": true,
+        "endpoints": [
+            {
+                "path": "/",
+                "body": "<html><head></head><body><h1>Registry API for the Tempo project</h1></body></html>"
+            },
+            {
+                "path": "/ping",
+                "code": "200",
+                "header": {
+                    "Content-Type": "application/json"
+                },
+                "body": "{\"health\":\"good\"}"
+            },
+            {
+                "path": "/toto",
+                "body": "<html><head></head><body><h1>TOTOT</h1></body></html>"
+            },
+            {
+                "path": "/txt",
+                "code": "201",
+                "header": {
+                    "Content-Type": "text/plain"
+                },
+                "body": "blabla"
+            },
+            {
+                "path": "/json",
+                "code": "200",
+                "header": {
+                    "Content-Type": "application/json"
+                },
+                "body": "{\"key\":\"value\"}"
+            },
+            {
+                "path": "/function",
+                "handler": "$ws.dynamicRequestHandlerTest",
+                "param_sample": "value de param_sample"
+            },
+            {
+                "path": "/auth",
+                "method": "POST",
+                "handler": "process.$api.authEndpoint",
+                "hashAlgorithm": "sha256",
+                "digest": "base64"
+            },
+            {
+                "path": "/session",
+                "method": "GET",
+                "handler": "process.$api.sessionEndpoint"
+            }
+        ]
+    }
+}

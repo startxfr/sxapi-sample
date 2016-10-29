@@ -1,0 +1,7 @@
+simple:
+  extends:
+    file: simple/docker-compose.yml
+    service: "simple"
+  container_name: "sxapi-sample-simple"
+  ports:
+    - "1970:19777"
