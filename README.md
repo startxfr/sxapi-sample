@@ -1,6 +1,6 @@
 # sxapi-sample
 
-Sample applications for SXAPI project
+Sample config file and modules for building microservices using sxapi project (latest) 
 
 SXAPI
 =====
