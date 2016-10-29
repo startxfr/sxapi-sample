@@ -1,8 +1,8 @@
 simple:
-  image: startxfr/sxapi
-  container_name: "sxapi-sample-simple"
+  image: startx/sxapi:latest
+  container_name: "sxapi-sample-simple-latest"
   cpu_shares: 4096
-  cpuset: 0
+  cpuset: "0"
   mem_limit: 1g
   memswap_limit: 1g
   restart: "on-failure:2"
@@ -11,5 +11,3 @@ simple:
   volumes:
     - "~/sxapi-data:/data"
     - "./:/conf"
-  environment:
-    SERVICE_NAME: "sxapi-sample-simple"
