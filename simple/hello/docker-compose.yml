@@ -1,6 +1,6 @@
 hello:
-  image: startx/sxapi:latest
-  container_name: "sxapi-sample-simple-hello-master"
+  image: startx/sxapi:0.0.4
+  container_name: "sxapi-sample-simple-hello-v0.0.4"
   cpu_shares: 4096
   mem_limit: 1g
   memswap_limit: 1g

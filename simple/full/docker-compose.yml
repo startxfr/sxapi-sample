@@ -1,6 +1,6 @@
 full:
-  image: startx/sxapi:latest
-  container_name: "sxapi-simple-full"
+  image: startx/sxapi:0.0.4
+  container_name: "sxapi-simple-full-v0.0.4"
   cpu_shares: 4096
   mem_limit: 1g
   memswap_limit: 1g
