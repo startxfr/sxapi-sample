@@ -1,0 +1,24 @@
+service:
+  image: startx/sv-apache:latest
+  container_name: "myservice"
+  cpu_shares: 4096
+  mem_limit: 1g
+  memswap_limit: 1g
+  restart: "on-failure:2"
+  ports:
+    - "8080:80"
+  volumes:
+    - "~/sxapi-data:/data"
+    - "./dispatcher.conf:/etc/httpd/conf.d/app.conf:ro"
+    
+service1:
+  extends:
+    file: service1/docker-compose.yml
+    service: "service"
+  container_name: "myservice-service1"
+    
+service2:
+  extends:
+    file: service2/docker-compose.yml
+    service: "service"
+  container_name: "myservice-service2"

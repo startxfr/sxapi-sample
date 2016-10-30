@@ -1,0 +1,12 @@
+service:
+  image: startx/sxapi:latest
+  container_name: "myservice"
+  cpu_shares: 4096
+  mem_limit: 1g
+  memswap_limit: 1g
+  restart: "on-failure:2"
+  ports:
+    - "8080:19777"
+  volumes:
+    - "~/sxapi-data:/data"
+    - "./:/conf"
