@@ -2,6 +2,8 @@
 
 Sample config file and modules for building microservices using sxapi project (latest) 
 
+[![Build Status](https://travis-ci.org/startxfr/sxapi-sample.svg?branch=dev)](https://travis-ci.org/startxfr/sxapi-sample)
+
 SXAPI
 =====
 SXAPI for Simple and eXtensible Application Programming Interface is an open-source project for building simple and small microservices quickly and efficiently.
