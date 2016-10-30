@@ -1,0 +1,30 @@
+{
+    "name": "myservice-service2",
+    "description": "",
+    "version": "dev",
+    "debug": true,
+    "session": {},
+    "plugins": [
+    ],
+    "log": {
+        "filters": {
+            "level": "0,1,2,3,4",
+            "type": "debug,info,error,warn"
+        }
+    },
+    "server": {
+        "type": "express",
+        "port": "19777",
+        "bodyParserJson": false,
+        "bodyParserUrl": true,
+        "endpoints": [
+            {
+                "path": "/",
+                "header": {
+                    "Content-Type": "text/plain"
+                },
+                "body": "my service 2"
+            }
+        ]
+    }
+}
