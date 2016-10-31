@@ -7,7 +7,7 @@ html:
   restart: "on-failure:2"
   privileged: true
   ports:
-    - "19602:19777"
+    - "8080:19777"
   volumes:
     - "~/sxapi-data:/data"
     - "./:/conf"
