@@ -1,0 +1,60 @@
+{
+    "name": "sxapi-sample-full",
+    "description": "sxapi sample with various kind of response all packaged into one service (dev). Display a static or simple dynamic content",
+    "version": "dev",
+    "debug": true,
+    "session": {},
+    "plugins": [
+    ],
+    "log": {
+        "filters": {
+            "level": "0,1,2,3,4",
+            "type": "debug,info,error,warn"
+        }
+    },
+    "server": {
+        "type": "express",
+        "port": "8080",
+        "bodyParserJson": true,
+        "bodyParserUrl": true,
+        "endpoints": [
+            {
+                "path": "/",
+                "body": "<html><head></head><body><h1>SXAPI simple response catalog</h1></body></html>"
+            },
+            {
+                "path": "/ping",
+                "code": "200",
+                "header": {
+                    "Content-Type": "application/json"
+                },
+                "body": "{\"health\":\"good\"}"
+            },
+            {
+                "path": "/html",
+                "body": "<html><head></head><body><h1>Static html content</h1></body></html>"
+            },
+            {
+                "path": "/txt",
+                "code": "201",
+                "header": {
+                    "Content-Type": "text/plain"
+                },
+                "body": "text response"
+            },
+            {
+                "path": "/json",
+                "code": "200",
+                "header": {
+                    "Content-Type": "application/json"
+                },
+                "body": "{\"key\":\"value\"}"
+            },
+            {
+                "path": "/function",
+                "handler": "$ws.dynamicRequestHandlerTest",
+                "param_sample": "value de param_sample"
+            }
+        ]
+    }
+}
