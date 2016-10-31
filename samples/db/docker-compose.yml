@@ -4,4 +4,4 @@ db-mysql:
     service: "mysql"
   container_name: "sxapi-sample-db-mysql"
   ports:
-    - "8091:19777"
+    - "1991:8080"

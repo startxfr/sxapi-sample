@@ -7,7 +7,7 @@ full:
   restart: "on-failure:2"
   privileged: true
   ports:
-    - "8080:19777"
+    - "1977:8080"
   volumes:
     - "~/sxapi-data:/data"
     - "./:/conf"

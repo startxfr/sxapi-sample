@@ -27,7 +27,7 @@
     },
     "server": {
         "type": "express",
-        "port": "19777",
+        "port": "8080",
         "bodyParserJson": true,
         "bodyParserUrl": true,
         "endpoints": [
