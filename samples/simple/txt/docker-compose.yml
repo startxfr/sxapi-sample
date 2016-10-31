@@ -5,8 +5,9 @@ txt:
   mem_limit: 1g
   memswap_limit: 1g
   restart: "on-failure:2"
+  privileged: true
   ports:
-    - "19606:19777"
+    - "8080:19777"
   volumes:
     - "~/sxapi-data:/data"
     - "./:/conf"
