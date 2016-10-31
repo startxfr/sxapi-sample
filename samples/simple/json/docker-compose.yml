@@ -5,6 +5,7 @@ json:
   mem_limit: 1g
   memswap_limit: 1g
   restart: "on-failure:2"
+  privileged: true
   ports:
     - "19603:19777"
   volumes:
