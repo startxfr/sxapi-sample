@@ -1,0 +1,93 @@
+{
+    "name": "sxapi-sample-db-mysql",
+    "description": "sxapi database sample for mysql endpoints (0.0.5). Display dynamic content from a simple database",
+    "version": "0.0.5",
+    "session": {},
+    "plugins": [
+    ],
+    "resources": {
+        "tempo_db": {
+            "_class": "./tempo-resource-couchbase",
+            "type": "couchbase",
+            "cluster": "http://54.155.3.16:8091",
+            "bucket": "tempo",
+            "insertOptions": {
+                "persist_to": 1,
+                "replicate_to": 1
+            },
+            "updateOptions": {
+                "persist_to": 1,
+                "replicate_to": 1
+            },
+            "deleteOptions": {
+                "persist_to": 1,
+                "replicate_to": 1
+            }
+        }
+    },
+    "server": {
+        "type": "express",
+        "port": "19777",
+        "bodyParserJson": true,
+        "bodyParserUrl": true,
+        "endpoints": [
+            {
+                "path": "/",
+                "method": "ROUTER",
+                "handler": "process.$api.hv.router",
+                "resource": "tempo_db",
+                "endpoints": [
+                    {
+                        "path": "/",
+                        "method": "GET",
+                        "handler": "process.$api.hv.listEndpoint",
+                        "query_view": "hv:all"
+                    },
+                    {
+                        "path": "/",
+                        "method": "POST",
+                        "handler": "process.$api.hv.addEndpoint",
+                        "authorized_profile": "aws-micro,aws-medium,google-micro",
+                        "authorized_state": "prepared,startable"
+                    },
+                    {
+                        "path": "/metrics",
+                        "method": "GET",
+                        "handler": "process.$api.hv.metricsEndpoint",
+                        "query_view": "hv:by_state"
+                    },
+                    {
+                        "path": "/:id",
+                        "method": "GET",
+                        "handler": "process.$api.hv.detailEndpoint"
+                    },
+                    {
+                        "path": "/:id",
+                        "method": "PUT",
+                        "handler": "process.$api.hv.updateEndpoint",
+                        "authorized_state": "prepared,startable,running,stopped,dead",
+                        "authorized_params": "owner,max_cell,state,token"
+                    },
+                    {
+                        "path": "/:id",
+                        "method": "DELETE",
+                        "handler": "process.$api.hv.deleteEndpoint",
+                        "authorized_state": "prepared,dead,stopped"
+                    },
+                    {
+                        "path": "/:id/start",
+                        "method": "GET",
+                        "handler": "process.$api.hv.startEndpoint",
+                        "authorized_state": "prepared,startable"
+                    },
+                    {
+                        "path": "/:id/stop",
+                        "method": "GET",
+                        "handler": "process.$api.hv.stopEndpoint",
+                        "authorized_state": "running"
+                    }
+                ]
+            }
+        ]
+    }
+}

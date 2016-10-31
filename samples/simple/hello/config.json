@@ -1,0 +1,30 @@
+{
+    "name": "sxapi-sample-simple-hello",
+    "description": "sxapi simple sample hello world response (0.0.5). Display a static txt content",
+    "version": "0.0.5",
+    "debug": true,
+    "session": {},
+    "plugins": [
+    ],
+    "log": {
+        "filters": {
+            "level": "0,1,2,3,4",
+            "type": "debug,info,error,warn"
+        }
+    },
+    "server": {
+        "type": "express",
+        "port": "19777",
+        "bodyParserJson": false,
+        "bodyParserUrl": true,
+        "endpoints": [
+            {
+                "path": "/",
+                "header": {
+                    "Content-Type": "text/plain"
+                },
+                "body": "hello world !!!"
+            }
+        ]
+    }
+}

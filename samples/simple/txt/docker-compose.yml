@@ -1,0 +1,13 @@
+txt:
+  image: startx/sxapi:0.0.5
+  container_name: "sxapi-sample-simple-txt-v0.0.5"
+  cpu_shares: 4096
+  mem_limit: 1g
+  memswap_limit: 1g
+  restart: "on-failure:2"
+  privileged: true
+  ports:
+    - "8080:19777"
+  volumes:
+    - "~/sxapi-data:/data"
+    - "./:/conf"

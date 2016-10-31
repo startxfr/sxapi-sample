@@ -1,0 +1,7 @@
+db-mysql:
+  extends:
+    file: mysql/docker-compose.yml
+    service: "mysql"
+  container_name: "sxapi-sample-db-mysql"
+  ports:
+    - "8091:19777"
