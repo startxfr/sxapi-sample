@@ -4,7 +4,7 @@ simple-full:
     service: "full"
   container_name: "sxapi-sample-simple-full"
   ports:
-    - "8081:19777"
+    - "1981:8080"
     
 simple-hello:
   extends:
@@ -12,7 +12,7 @@ simple-hello:
     service: "hello"
   container_name: "sxapi-sample-simple-hello"
   ports:
-    - "8082:19777"
+    - "1982:8080"
       
 simple-html:
   extends:
@@ -20,7 +20,7 @@ simple-html:
     service: "html"
   container_name: "sxapi-sample-simple-html"
   ports:
-    - "8083:19777"
+    - "1983:8080"
       
 simple-json:
   extends:
@@ -28,7 +28,7 @@ simple-json:
     service: "json"
   container_name: "sxapi-sample-simple-json"
   ports:
-    - "8084:19777"
+    - "1984:8080"
       
 simple-module:
   extends:
@@ -36,7 +36,7 @@ simple-module:
     service: "module"
   container_name: "sxapi-sample-simple-module"
   ports:
-    - "8085:19777"
+    - "1985:8080"
       
 simple-ping:
   extends:
@@ -44,7 +44,7 @@ simple-ping:
     service: "ping"
   container_name: "sxapi-sample-simple-ping"
   ports:
-    - "8086:19777"
+    - "1986:8080"
     
 simple-txt:
   extends:
@@ -52,6 +52,6 @@ simple-txt:
     service: "txt"
   container_name: "sxapi-sample-simple-txt"
   ports:
-    - "8087:19777"
+    - "1987:8080"
     
     

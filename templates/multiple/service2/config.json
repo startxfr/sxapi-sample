@@ -1,7 +1,7 @@
 {
     "name": "myservice-service2",
     "description": "",
-    "version": "dev",
+    "version": "master",
     "debug": true,
     "session": {},
     "plugins": [
@@ -14,7 +14,7 @@
     },
     "server": {
         "type": "express",
-        "port": "19777",
+        "port": "8080",
         "bodyParserJson": false,
         "bodyParserUrl": true,
         "endpoints": [

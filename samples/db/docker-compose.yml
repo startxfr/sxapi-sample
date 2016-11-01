@@ -4,4 +4,12 @@ db-mysql:
     service: "mysql"
   container_name: "sxapi-sample-db-mysql"
   ports:
-    - "8091:19777"
+    - "1991:8080"
+    
+db-couchbase:
+  extends:
+    file: couchbase/docker-compose.yml
+    service: "couchbase"
+  container_name: "sxapi-sample-db-couchbase"
+  ports:
+    - "1992:8080"

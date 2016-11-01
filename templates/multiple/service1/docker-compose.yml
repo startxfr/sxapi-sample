@@ -6,7 +6,7 @@ service:
   memswap_limit: 1g
   restart: "on-failure:2"
   ports:
-    - "8081:19777"
+    - "8081:8080"
   volumes:
     - "~/sxapi-data:/data"
     - "./:/conf"

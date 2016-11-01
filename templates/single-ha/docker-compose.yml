@@ -18,7 +18,7 @@ service1:
   memswap_limit: 1g
   restart: "on-failure:2"
   ports:
-    - "80:19777"
+    - "80:8080"
   volumes:
     - "~/sxapi-data:/data"
     - "./:/conf"
@@ -31,7 +31,7 @@ service2:
   memswap_limit: 1g
   restart: "on-failure:2"
   ports:
-    - "80:19777"
+    - "80:8080"
   volumes:
     - "~/sxapi-data:/data"
     - "./:/conf"

@@ -1,21 +1,16 @@
 {
-    "name": "sxapi-sample-db-mysql",
-    "description": "sxapi database sample for mysql endpoints (master). Display dynamic content from a simple database",
+    "name": "sxapi-sample-db-couchbase",
+    "description": "sxapi database sample for couchbase endpoints (master). Display dynamic content from a simple database",
     "version": "master",
     "session": {},
     "plugins": [
     ],
     "resources": {
-        "mysql-sample": {
-            "_class": "resource-mysql",
-            "type": "mysql",
-            "server": {
-                "host": "172.17.42.1",
-                "port": "3306",
-                "user": "dev",
-                "password": "dev",
-                "database": "test"
-            }
+        "couchbase-sample": {
+            "_class": "resource-couchbase",
+            "type": "couchbase",
+            "cluster": "http://172.17.42.1:8091",
+            "bucket": "beer-sample"
         }
     },
     "server": {
@@ -27,18 +22,21 @@
             {
                 "path": "/",
                 "method": "ROUTER",
-                "resource": "mysql-sample",
-                "table": "log",
-                "id_fields": "id",
+                "resource": "couchbase-sample",
                 "endpoints": [
                     {
                         "path": "/",
                         "method": "GET",
                         "resource_handler": "endpoints.list",
-                        "sql": "SELECT * FROM `log` LIMIT 10"
+                        "n1ql": "SELECT * FROM `beer-sample` LIMIT 10"
                     },
                     {
                         "path": "/",
+                        "method": "POST",
+                        "resource_handler": "endpoints.create"
+                    },
+                    {
+                        "path": "/:id",
                         "method": "POST",
                         "resource_handler": "endpoints.create"
                     },
