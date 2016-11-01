@@ -1,7 +1,7 @@
 {
     "name": "sxapi-sample-simple-html",
-    "description": "sxapi simple sample html response (0.0.5). Display a static html document",
-    "version": "0.0.5",
+    "description": "sxapi simple sample html response (0.0.6). Display a static html document",
+    "version": "0.0.6",
     "debug": true,
     "session": {},
     "plugins": [
@@ -14,7 +14,7 @@
     },
     "server": {
         "type": "express",
-        "port": "19777",
+        "port": "8080",
         "bodyParserJson": false,
         "bodyParserUrl": true,
         "endpoints": [

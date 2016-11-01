@@ -1,0 +1,170 @@
+{
+    "name": "sxapi-sample-full",
+    "description": "sxapi sample with various kind of response all packaged into one service (v0.0.6). Display a static or simple dynamic content",
+    "version": "v0.0.6",
+    "debug": true,
+    "session": {},
+    "resources": {
+        "sqs-sample": {
+            "_class": "resource-sqs",
+            "type": "sqs",
+            "config": {
+                "QueueUrl": "https://sqs.eu-west-1.amazonaws.com/791728029433/admin",
+                "MaxNumberOfMessages": 10,
+                "VisibilityTimeout": 10,
+                "WaitTimeSeconds": 0
+            },
+            "ACCESS_ID": ">>>>>>YOUR ID<<<<<<",
+            "ACCESS_KEY": ">>>>>>YOUR KEY<<<<<<",
+            "SESSION_TOKEN": "",
+            "region": "eu-west-1"
+        },
+        "couchbase-sample": {
+            "_class": "resource-couchbase",
+            "type": "couchbase",
+            "cluster": "http://172.17.42.1:8091",
+            "bucket": "beer-sample"
+        },
+        "mysql-sample": {
+            "_class": "resource-mysql",
+            "type": "mysql",
+            "server": {
+                "host": "172.17.42.1",
+                "port": "3306",
+                "user": "dev",
+                "password": "dev",
+                "database": "udi"
+            }
+        }
+    },
+    "log": {
+        "filters": {
+            "level": "0,1,2,3,4",
+            "type": "debug,info,error,warn"
+        }
+    },
+    "server": {
+        "type": "express",
+        "port": "8080",
+        "bodyParserJson": true,
+        "bodyParserUrl": true,
+        "endpoints": [
+            {
+                "path": "/",
+                "body": "<html><head></head><body><h1>SXAPI simple response catalog</h1></body></html>"
+            },
+            {
+                "path": "/ping",
+                "code": "200",
+                "header": {
+                    "Content-Type": "application/json"
+                },
+                "body": "{\"health\":\"good\"}"
+            },
+            {
+                "path": "/html",
+                "body": "<html><head></head><body><h1>Static html content</h1></body></html>"
+            },
+            {
+                "path": "/txt",
+                "code": "201",
+                "header": {
+                    "Content-Type": "text/plain"
+                },
+                "body": "text response"
+            },
+            {
+                "path": "/json",
+                "code": "200",
+                "header": {
+                    "Content-Type": "application/json"
+                },
+                "body": "{\"key\":\"value\"}"
+            },
+            {
+                "path": "/function",
+                "handler": "$ws.dynamicRequestHandlerTest",
+                "param_sample": "value de param_sample"
+            },
+            {
+                "path": "/message",
+                "method": "POST",
+                "resource": "sqs-sample",
+                "resource_handler": "endpoints.addMessage"
+            },
+            {
+                "path": "/beer",
+                "method": "ROUTER",
+                "resource": "couchbase-sample",
+                "endpoints": [
+                    {
+                        "path": "/beer",
+                        "method": "GET",
+                        "resource_handler": "endpoints.list",
+                        "n1ql": "SELECT * FROM `beer-sample` LIMIT 10"
+                    },
+                    {
+                        "path": "/beer",
+                        "method": "POST",
+                        "resource_handler": "endpoints.create"
+                    },
+                    {
+                        "path": "/beer/:id",
+                        "method": "POST",
+                        "resource_handler": "endpoints.create"
+                    },
+                    {
+                        "path": "/beer/:id",
+                        "method": "GET",
+                        "resource_handler": "endpoints.get"
+                    },
+                    {
+                        "path": "/beer/:id",
+                        "method": "PUT",
+                        "resource_handler": "endpoints.update"
+                    },
+                    {
+                        "path": "/beer/:id",
+                        "method": "DELETE",
+                        "resource_handler": "endpoints.delete"
+                    }
+                ]
+            },
+            {
+                "path": "/mysql",
+                "method": "ROUTER",
+                "resource": "mysql-sample",
+                "table": "sessions",
+                "id_fields": "id_sess",
+                "endpoints": [
+                    {
+                        "path": "/mysql",
+                        "method": "GET",
+                        "resource_handler": "endpoints.list",
+                        "sql": "SELECT * FROM `composantes` LIMIT 10"
+                    },
+                    {
+                        "path": "/mysql",
+                        "method": "POST",
+                        "resource_handler": "endpoints.create"
+                    },
+                    {
+                        "path": "/mysql/:id",
+                        "method": "GET",
+                        "resource_handler": "endpoints.get"
+                    },
+                    {
+                        "path": "/mysql/:id",
+                        "method": "PUT",
+                        "resource_handler": "endpoints.update"
+                    },
+                    {
+                        "path": "/mysql/:id",
+                        "method": "DELETE",
+                        "resource_handler": "endpoints.delete"
+                    }
+                ]
+            }
+        ]
+    }
+}

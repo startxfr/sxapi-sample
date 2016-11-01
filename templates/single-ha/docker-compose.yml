@@ -11,27 +11,27 @@ service:
     
     
 service1:
-  image: startx/sxapi:latest
+  image: startx/sxapi:0.0.6
   container_name: "myservice-service1"
   cpu_shares: 4096
   mem_limit: 1g
   memswap_limit: 1g
   restart: "on-failure:2"
   ports:
-    - "80:19777"
+    - "80:8080"
   volumes:
     - "~/sxapi-data:/data"
     - "./:/conf"
     
 service2:
-  image: startx/sxapi:latest
+  image: startx/sxapi:0.0.6
   container_name: "myservice-service2"
   cpu_shares: 4096
   mem_limit: 1g
   memswap_limit: 1g
   restart: "on-failure:2"
   ports:
-    - "80:19777"
+    - "80:8080"
   volumes:
     - "~/sxapi-data:/data"
     - "./:/conf"

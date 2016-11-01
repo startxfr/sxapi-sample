@@ -1,7 +1,7 @@
 {
     "name": "sxapi-sample-simple-full",
-    "description": "sxapi simple sample with various kind of response all packaged into one service (0.0.5). Display a static or simple dynamic content",
-    "version": "0.0.5",
+    "description": "sxapi simple sample with various kind of response all packaged into one service (0.0.6). Display a static or simple dynamic content",
+    "version": "0.0.6",
     "debug": true,
     "session": {},
     "plugins": [
@@ -14,7 +14,7 @@
     },
     "server": {
         "type": "express",
-        "port": "19777",
+        "port": "8080",
         "bodyParserJson": true,
         "bodyParserUrl": true,
         "endpoints": [

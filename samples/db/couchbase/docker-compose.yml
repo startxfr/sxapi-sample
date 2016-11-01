@@ -1,10 +1,11 @@
-service:
+couchbase:
   image: startx/sxapi:0.0.6
-  container_name: "myservice"
+  container_name: "sxapi-sample-db-couchbase-v0.0.6"
   cpu_shares: 4096
   mem_limit: 1g
   memswap_limit: 1g
   restart: "on-failure:2"
+  privileged: true
   ports:
     - "1977:8080"
   volumes:
