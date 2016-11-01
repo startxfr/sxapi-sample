@@ -46,3 +46,9 @@ db-mysql:
     file: db/docker-compose.yml
     service: "db-mysql"
   container_name: "sxapi-sample-db-mysql-dev"
+
+db-couchbase:
+  extends:
+    file: db/docker-compose.yml
+    service: "db-couchbase"
+  container_name: "sxapi-sample-db-couchbase-dev"
