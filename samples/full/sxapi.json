@@ -6,7 +6,7 @@
     "session": {},
     "resources": {
         "sqs-sample": {
-            "_class": "resource-sqs",
+            "_class": "sqs",
             "config": {
                 "QueueUrl": "https://sqs.eu-west-1.amazonaws.com/791728029433/admin",
                 "MaxNumberOfMessages": 10,
@@ -19,12 +19,12 @@
             "region": "eu-west-1"
         },
         "couchbase-sample": {
-            "_class": "resource-couchbase",
+            "_class": "couchbase",
             "cluster": "http://172.17.42.1:8091",
             "bucket": "beer-sample"
         },
         "mysql-sample": {
-            "_class": "resource-mysql",
+            "_class": "mysql",
             "server": {
                 "host": "172.17.42.1",
                 "port": "3306",
