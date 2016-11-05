@@ -7,7 +7,6 @@
     "resources": {
         "sqs-sample": {
             "_class": "resource-sqs",
-            "type": "sqs",
             "config": {
                 "QueueUrl": "https://sqs.eu-west-1.amazonaws.com/791728029433/admin",
                 "MaxNumberOfMessages": 10,
@@ -21,13 +20,11 @@
         },
         "couchbase-sample": {
             "_class": "resource-couchbase",
-            "type": "couchbase",
             "cluster": "http://172.17.42.1:8091",
             "bucket": "beer-sample"
         },
         "mysql-sample": {
             "_class": "resource-mysql",
-            "type": "mysql",
             "server": {
                 "host": "172.17.42.1",
                 "port": "3306",

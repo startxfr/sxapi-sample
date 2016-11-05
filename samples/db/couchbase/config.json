@@ -8,9 +8,20 @@
     "resources": {
         "couchbase-sample": {
             "_class": "resource-couchbase",
-            "type": "couchbase",
             "cluster": "http://172.17.42.1:8091",
-            "bucket": "beer-sample"
+            "bucket": "beer-sample",
+            "insertOptions": {
+                "persist_to": 1,
+                "replicate_to": 0
+            },
+            "updateOptions": {
+                "persist_to": 1,
+                "replicate_to": 0
+            },
+            "deleteOptions": {
+                "persist_to": 1,
+                "replicate_to": 0
+            }
         }
     },
     "server": {
