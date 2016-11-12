@@ -1,5 +1,5 @@
 full:
-  image: startx/sxapi:0.0.6
+  image: startx/sxapi:0.0.7
   container_name: "sxapi-full"
   cpu_shares: 4096
   mem_limit: 1g

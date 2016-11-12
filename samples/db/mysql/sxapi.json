@@ -1,7 +1,7 @@
 {
     "name": "sxapi-sample-db-mysql",
-    "description": "sxapi database sample for mysql endpoints (0.0.6). Display dynamic content from a simple database",
-    "version": "0.0.6",
+    "description": "sxapi database sample for mysql endpoints (v0.0.7). Display dynamic content from a simple database",
+    "version": "0.0.7",
     "session": {},
     "plugins": [
     ],

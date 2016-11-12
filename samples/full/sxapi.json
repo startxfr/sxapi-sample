@@ -1,7 +1,7 @@
 {
     "name": "sxapi-sample-full",
-    "description": "sxapi sample with various kind of response all packaged into one service (master). Display a static or simple dynamic content",
-    "version": "master",
+    "description": "sxapi sample with various kind of response all packaged into one service (v0.0.7). Display a static or simple dynamic content",
+    "version": "0.0.7",
     "debug": true,
     "session": {},
     "resources": {
