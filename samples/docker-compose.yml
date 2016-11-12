@@ -1,13 +1,13 @@
 full:
   extends:
     file: full/docker-compose.yml
-    service: "full"
+    service: "sxapi"
   container_name: "sxapi-sample-full-dev"
 
 websocket:
   extends:
     file: websocket/docker-compose.yml
-    service: "websocket"
+    service: "sxapi"
   container_name: "sxapi-sample-websocket-dev"
 
 simple-full:

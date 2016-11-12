@@ -1,15 +1,16 @@
 #!/bin/bash
-echo "=================> STARTING TEST"
-echo "=================> SETUP TEST ENVIRONMENT"
+echo "=================> STARTING TEST 'ALL SAMPLES' (dev)"
+echo "=================> SETUP 'ALL SAMPLES' TEST ENVIRONEMENT (dev)"
 set -ev
 mkdir /tmp/sxapi-sample;
 cd /tmp/sxapi-sample;
 git clone https://github.com/startxfr/sxapi-sample.git .
-echo "========> TESTING All containers"
+git checkout dev
+echo "========> STARTING 'ALL SAMPLES' containers (dev)"
 sudo docker-compose -f samples/docker-compose.yml up -d
-echo "========> RESULT"
+echo "========> LIST OF 'ALL SAMPLES' containers (dev)"
 sudo docker-compose -f samples/docker-compose.yml ps
-echo "=================> TEST ENDED SUCCESSFULLY"
+echo "=================> TEST ENDED SUCCESSFULLY (dev)"
 exit 0;
 
 
