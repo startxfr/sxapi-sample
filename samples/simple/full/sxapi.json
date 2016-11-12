@@ -20,7 +20,7 @@
         "endpoints": [
             {
                 "path": "/",
-                "body": "<html><head></head><body><h1>SXAPI simple response catalog</h1></body></html>"
+                "body": "<html><head></head><body><h1>SXAPI simple/full response catalog</h1></body></html>"
             },
             {
                 "path": "/ping",

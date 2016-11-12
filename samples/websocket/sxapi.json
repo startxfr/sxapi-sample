@@ -41,10 +41,15 @@
         }
     },
     "server": {
+        "type": "express",
+        "port": "8080",
+        "bodyParserJson": true,
+        "bodyParserUrl": true,
+        "websockets": true,
         "endpoints": [
             {
                 "path": "/",
-                "body": "<html><head></head><body><h1>SXAPI full response catalog</h1></body></html>"
+                "body": "<html><head></head><body><h1>SXAPI websocket response catalog</h1></body></html>"
             },
             {
                 "path": "/ping",
