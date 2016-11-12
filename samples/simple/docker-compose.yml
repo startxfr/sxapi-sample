@@ -1,56 +1,56 @@
 simple-full:
   extends:
     file: full/docker-compose.yml
-    service: "full"
-  container_name: "sxapi-sample-simple-full"
+    service: "sxapi"
+  container_name: "sxapi-sample-simple-full-v0.0.7"
   ports:
     - "1981:8080"
     
 simple-hello:
   extends:
     file: hello/docker-compose.yml
-    service: "hello"
-  container_name: "sxapi-sample-simple-hello"
+    service: "sxapi"
+  container_name: "sxapi-sample-simple-hello-v0.0.7"
   ports:
     - "1982:8080"
       
 simple-html:
   extends:
     file: html/docker-compose.yml
-    service: "html"
-  container_name: "sxapi-sample-simple-html"
+    service: "sxapi"
+  container_name: "sxapi-sample-simple-html-v0.0.7"
   ports:
     - "1983:8080"
       
 simple-json:
   extends:
     file: json/docker-compose.yml
-    service: "json"
-  container_name: "sxapi-sample-simple-json"
+    service: "sxapi"
+  container_name: "sxapi-sample-simple-json-v0.0.7"
   ports:
     - "1984:8080"
       
 simple-module:
   extends:
     file: module/docker-compose.yml
-    service: "module"
-  container_name: "sxapi-sample-simple-module"
+    service: "sxapi"
+  container_name: "sxapi-sample-simple-module-v0.0.7"
   ports:
     - "1985:8080"
       
 simple-ping:
   extends:
     file: ping/docker-compose.yml
-    service: "ping"
-  container_name: "sxapi-sample-simple-ping"
+    service: "sxapi"
+  container_name: "sxapi-sample-simple-ping-v0.0.7"
   ports:
     - "1986:8080"
     
 simple-txt:
   extends:
     file: txt/docker-compose.yml
-    service: "txt"
-  container_name: "sxapi-sample-simple-txt"
+    service: "sxapi"
+  container_name: "sxapi-sample-simple-txt-v0.0.7"
   ports:
     - "1987:8080"
     

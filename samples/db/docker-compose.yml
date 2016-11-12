@@ -1,15 +1,15 @@
 db-mysql:
   extends:
     file: mysql/docker-compose.yml
-    service: "mysql"
-  container_name: "sxapi-sample-db-mysql"
+    service: "sxapi"
+  container_name: "sxapi-sample-db-mysql-v0.0.7"
   ports:
     - "1991:8080"
     
 db-couchbase:
   extends:
     file: couchbase/docker-compose.yml
-    service: "couchbase"
-  container_name: "sxapi-sample-db-couchbase"
+    service: "sxapi"
+  container_name: "sxapi-sample-db-couchbase-v0.0.7"
   ports:
     - "1992:8080"
