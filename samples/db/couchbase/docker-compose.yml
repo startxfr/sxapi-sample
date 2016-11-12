@@ -11,3 +11,21 @@ couchbase:
   volumes:
     - "~/sxapi-data:/data"
     - "./:/conf"
+
+#couchbase-db:
+#  image: couchbase:latest
+#  container_name: "sxapi-sample-db-couchbase-db-master"
+#  cpu_shares: 4096
+#  mem_limit: 2g
+#  memswap_limit: 4g
+#  ulimits:
+#    nofile: 40960
+#    core: 100000000
+#    memlock: 100000000
+#  restart: "on-failure:2"
+#  privileged: true
+#  ports:
+#    - "8091-8094:8091-8094"
+#    - "11210:11210"
+#  volumes:
+#    - "~/sxapi-data/couchbase-db:/opt/couchbase/var"
