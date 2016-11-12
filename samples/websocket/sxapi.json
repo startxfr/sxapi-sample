@@ -6,8 +6,7 @@
     "session": {},
     "resources": {
         "sqs-sample": {
-            "_class": "resource-sqs",
-            "type": "sqs",
+            "_class": "sqs",
             "config": {
                 "QueueUrl": "https://sqs.eu-west-1.amazonaws.com/791728029433/admin",
                 "MaxNumberOfMessages": 10,
@@ -20,14 +19,12 @@
             "region": "eu-west-1"
         },
         "couchbase-sample": {
-            "_class": "resource-couchbase",
-            "type": "couchbase",
+            "_class": "couchbase",
             "cluster": "http://172.17.42.1:8091",
             "bucket": "beer-sample"
         },
         "mysql-sample": {
-            "_class": "resource-mysql",
-            "type": "mysql",
+            "_class": "mysql",
             "server": {
                 "host": "172.17.42.1",
                 "port": "3306",
@@ -48,10 +45,11 @@
         "port": "8080",
         "bodyParserJson": true,
         "bodyParserUrl": true,
+        "websockets": true,
         "endpoints": [
             {
                 "path": "/",
-                "body": "<html><head></head><body><h1>SXAPI simple response catalog</h1></body></html>"
+                "body": "<html><head></head><body><h1>SXAPI websocket response catalog</h1></body></html>"
             },
             {
                 "path": "/ping",
