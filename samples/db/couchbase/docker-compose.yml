@@ -1,6 +1,6 @@
-couchbase:
+sxapi:
   image: startx/sxapi:latest
-  container_name: "sxapi-sample-db-couchbase-master"
+  container_name: "sxapi-myapi"
   cpu_shares: 4096
   mem_limit: 1g
   memswap_limit: 1g
@@ -12,9 +12,9 @@ couchbase:
     - "~/sxapi-data:/data"
     - "./:/conf"
 
-#couchbase-db:
+#sxapi-couchbase:
 #  image: couchbase:latest
-#  container_name: "sxapi-sample-db-couchbase-db-master"
+#  container_name: "sxapi-myapi-couchbase"
 #  cpu_shares: 4096
 #  mem_limit: 2g
 #  memswap_limit: 4g

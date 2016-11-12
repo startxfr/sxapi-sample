@@ -1,20 +1,15 @@
 #!/bin/bash
-echo "=================> STARTING TEST"
-echo "=================> SETUP TEST ENVIRONMENT"
-set -ev
-mkdir /tmp/sxapi;
+echo "=================> STARTING TEST OF YOUR SXAPI INSTANCE (master)"
+echo "=================> SETUP TEST ENVIRONMENT (master)"
+rm -rf /tmp/sxapi;
+export CWD=$(pwd)
+cp -r $PWD /tmp/sxapi
 cd /tmp/sxapi;
-git clone https://github.com/startxfr/sxapi-core.git .
-echo "========> BUILDING Service Container (latest)"
+echo "========> BUILDING YOUR SXAPI INSTANCE (master)"
 sudo docker-compose build
-echo "========> TESTING OS Container (latest)"
+echo "========> STARTING YOUR SXAPI INSTANCE (master)"
 sudo docker-compose up -d
-echo "========> RESULT"
+echo "========> STATE OF YOUR SXAPI INSTANCE (master)"
 sudo docker-compose ps
 echo "=================> TEST ENDED SUCCESSFULLY"
 exit 0;
-
-
-
-
-
