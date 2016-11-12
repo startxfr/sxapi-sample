@@ -3,64 +3,86 @@ full:
     file: full/docker-compose.yml
     service: "sxapi"
   container_name: "sxapi-sample-full-master"
+  ports:
+    - "1971:8080"
 
 websocket:
   extends:
     file: websocket/docker-compose.yml
     service: "sxapi"
   container_name: "sxapi-sample-websocket-master"
+  ports:
+    - "1961:8080"
 
 simple-full:
   extends:
-    file: simple/docker-compose.yml
-    service: "simple-full"
+    file: simple/full/docker-compose.yml
+    service: "sxapi"
   container_name: "sxapi-sample-simple-full-master"
+  ports:
+    - "1981:8080"
 
 simple-hello:
   extends:
-    file: simple/docker-compose.yml
-    service: "simple-hello"
+    file: simple/hello/docker-compose.yml
+    service: "sxapi"
   container_name: "sxapi-sample-simple-hello-master"
+  ports:
+    - "1982:8080"
   
 simple-html:
   extends:
-    file: simple/docker-compose.yml
-    service: "simple-html"
+    file: simple/html/docker-compose.yml
+    service: "sxapi"
   container_name: "sxapi-sample-simple-html-master"
+  ports:
+    - "1983:8080"
   
 simple-json:
   extends:
-    file: simple/docker-compose.yml
-    service: "simple-json"
+    file: simple/json/docker-compose.yml
+    service: "sxapi"
   container_name: "sxapi-sample-simple-json-master"
+  ports:
+    - "1984:8080"
   
 simple-module:
   extends:
-    file: simple/docker-compose.yml
-    service: "simple-module"
+    file: simple/module/docker-compose.yml
+    service: "sxapi"
   container_name: "sxapi-sample-simple-module-master"
+  ports:
+    - "1985:8080"
   
 simple-ping:
   extends:
-    file: simple/docker-compose.yml
-    service: "simple-ping"
+    file: simple/ping/docker-compose.yml
+    service: "sxapi"
   container_name: "sxapi-sample-simple-ping-master"
+  ports:
+    - "1986:8080"
   
 simple-txt:
   extends:
-    file: simple/docker-compose.yml
-    service: "simple-txt"
+    file: simple/txt/docker-compose.yml
+    service: "sxapi"
   container_name: "sxapi-sample-simple-txt-master"
+  ports:
+    - "1987:8080"
   
 
 db-mysql:
   extends:
-    file: db/docker-compose.yml
-    service: "db-mysql"
+    file: db/mysql/docker-compose.yml
+    service: "sxapi"
   container_name: "sxapi-sample-db-mysql-master"
+  ports:
+    - "1991:8080"
 
 db-couchbase:
   extends:
-    file: db/docker-compose.yml
-    service: "db-couchbase"
+    file: db/couchbase/docker-compose.yml
+    service: "sxapi"
   container_name: "sxapi-sample-db-couchbase-master"
+  ports:
+    - "1992:8080"
