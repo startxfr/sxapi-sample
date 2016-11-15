@@ -133,7 +133,7 @@
                 "method": "ROUTER",
                 "resource": "mysql-sample",
                 "table": "sessions",
-                "id_fields": "id_sess",
+                "id_field": "id_sess",
                 "endpoints": [
                     {
                         "path": "/mysql",

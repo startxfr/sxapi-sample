@@ -3,7 +3,23 @@
     "description": "sxapi sample with various kind of response all packaged into one service (dev). Display a static or simple dynamic content",
     "version": "dev",
     "debug": true,
-    "session": {},
+    "session": {
+        "transport": {
+            "type": "token",
+            "param": "sxapi_sess"
+        },
+        "backend": {
+            "type": "mysql",
+            "resource": "mysql-sample",
+            "table": "sessions",
+            "sid_field": "token_sess",
+            "id_field": "id_sess",
+            "fields": {
+                "ip" : "ip_sess",
+                "date" : "date_sess"
+            }
+        }
+    },
     "resources": {
         "sqs-sample": {
             "_class": "sqs",
@@ -30,7 +46,7 @@
                 "port": "3306",
                 "user": "dev",
                 "password": "dev",
-                "database": "udi"
+                "database": "sxapi"
             }
         }
     },
@@ -128,7 +144,7 @@
                 "method": "ROUTER",
                 "resource": "mysql-sample",
                 "table": "sessions",
-                "id_fields": "id_sess",
+                "id_field": "id_sess",
                 "endpoints": [
                     {
                         "path": "/mysql",
