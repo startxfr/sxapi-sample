@@ -4,9 +4,11 @@
     "version": "dev",
     "debug": true,
     "session": {
+        "duration": 3600,
+        "auto_create": true,
         "transport": {
-            "type": "token",
-            "param": "sxapi_sess"
+            "type": "cookie",
+            "cookie_name": "sxapi-sess"
         },
         "backend": {
             "type": "mysql",
@@ -15,8 +17,9 @@
             "sid_field": "token_sess",
             "id_field": "id_sess",
             "fields": {
-                "ip" : "ip_sess",
-                "date" : "date_sess"
+                "ip": "ip_sess",
+                "start": "start_sess",
+                "stop": "stop_sess"
             }
         }
     },
