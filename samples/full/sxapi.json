@@ -25,7 +25,7 @@
     },
     "resources": {
         "sqs-sample": {
-            "_class": "sqs",
+            "_class": "aws_sqs",
             "config": {
                 "QueueUrl": "https://sqs.eu-west-1.amazonaws.com/791728029433/admin",
                 "MaxNumberOfMessages": 10,
@@ -41,6 +41,17 @@
             "_class": "couchbase",
             "cluster": "http://172.17.42.1:8091",
             "bucket": "beer-sample"
+        },
+        "serviceinfo-sample": {
+            "_class": "serviceinfo"
+        },
+        "redis-sample": {
+            "_class": "redis",
+            "url" : "redis://172.17.42.1:6379"
+        },
+        "http-sample": {
+            "_class": "http",
+            "url" : "https://adobe.github.io/Spry/data/json/array-02.js"
         },
         "mysql-sample": {
             "_class": "mysql",
@@ -105,6 +116,17 @@
                 "resource_handler": "endpoints.addMessage"
             },
             {
+                "path": "/info",
+                "resource": "serviceinfo-sample",
+                "resource_handler": "endpoints.info"
+            },
+            {
+                "path": "/http",
+                "resource": "http-sample",
+                "resource_handler": "endpoints.call",
+                "url": "https://adobe.github.io/Spry/data/json/object-01.js"
+            },
+            {
                 "path": "/beer",
                 "method": "ROUTER",
                 "resource": "couchbase-sample",
@@ -137,6 +159,38 @@
                     },
                     {
                         "path": "/beer/:id",
+                        "method": "DELETE",
+                        "resource_handler": "endpoints.delete"
+                    }
+                ]
+            },
+            {
+                "path": "/redis",
+                "method": "ROUTER",
+                "resource": "redis-sample",
+                "endpoints": [
+                    {
+                        "path": "/redis",
+                        "method": "POST",
+                        "resource_handler": "endpoints.create"
+                    },
+                    {
+                        "path": "/redis/:id",
+                        "method": "POST",
+                        "resource_handler": "endpoints.create"
+                    },
+                    {
+                        "path": "/redis/:id",
+                        "method": "GET",
+                        "resource_handler": "endpoints.get"
+                    },
+                    {
+                        "path": "/redis/:id",
+                        "method": "PUT",
+                        "resource_handler": "endpoints.update"
+                    },
+                    {
+                        "path": "/redis/:id",
                         "method": "DELETE",
                         "resource_handler": "endpoints.delete"
                     }
