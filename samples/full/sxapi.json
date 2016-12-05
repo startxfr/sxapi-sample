@@ -26,12 +26,26 @@
     "resources": {
         "sqs-sample": {
             "_class": "aws_sqs",
-            "config": {
-                "QueueUrl": "https://sqs.eu-west-1.amazonaws.com/791728029433/admin",
+            "read_options": {
                 "MaxNumberOfMessages": 10,
                 "VisibilityTimeout": 10,
                 "WaitTimeSeconds": 0
             },
+            "delete_options": {
+                "MaxNumberOfMessages": 10,
+                "VisibilityTimeout": 10,
+                "WaitTimeSeconds": 0
+            },
+            "send_options": {
+                "DelaySeconds": 10,
+                "MessageAttributes": {
+                    "from": {
+                        "DataType": "String",
+                        "StringValue": "startx"
+                    }
+                }
+            },
+            "QueueUrl": "https://sqs.eu-west-1.amazonaws.com/791728029433/admin",
             "ACCESS_ID": ">>>>>>YOUR ID<<<<<<",
             "ACCESS_KEY": ">>>>>>YOUR KEY<<<<<<",
             "SESSION_TOKEN": "",
@@ -47,11 +61,11 @@
         },
         "redis-sample": {
             "_class": "redis",
-            "url" : "redis://172.17.42.1:6379"
+            "url": "redis://172.17.42.1:6379"
         },
         "http-sample": {
             "_class": "http",
-            "url" : "https://adobe.github.io/Spry/data/json/array-02.js"
+            "url": "https://adobe.github.io/Spry/data/json/array-02.js"
         },
         "mysql-sample": {
             "_class": "mysql",
