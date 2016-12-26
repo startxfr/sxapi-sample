@@ -1,0 +1,77 @@
+{
+    "name": "sxapi-sample-aws-s3",
+    "description": "sxapi AWS sample for S3 endpoints (dev). Display dynamic content from a S3 bucket",
+    "version": "dev",
+    "session": {},
+    "plugins": [
+    ],
+    "resources": {
+        "s3-sample": {
+            "_class": "aws_s3",
+            "read_options": {
+            },
+            "delete_options": {
+            },
+            "send_options": {
+            },
+            "ACCESS_ID": "AKIAJ7JDWBNTZOXZRM6A",
+            "ACCESS_KEY": "VQwNHhw/vAVbxDn9vRqC1KQUngz+DXolCnfpgkAl",
+            "SESSION_TOKEN": "",
+            "region": "eu-west-1"
+        }
+    },
+    "server": {
+        "type": "express",
+        "port": "8080",
+        "bodyParserJson": true,
+        "bodyParserUrl": true,
+        "endpoints": [
+            {
+                "path": "/",
+                "method": "ROUTER",
+                "resource": "s3-sample",
+                "endpoints": [
+                    {
+                        "path": "/bucket",
+                        "method": "GET",
+                        "resource_handler": "endpoints.listBuckets",
+                        "config": {}
+                    },
+                    {
+                        "path": "/bucket/:id",
+                        "method": "POST",
+                        "resource_handler": "endpoints.addBucket",
+                        "config": {}
+                    },
+                    {
+                        "path": "/bucket/:id",
+                        "method": "GET",
+                        "resource_handler": "endpoints.infoBucket",
+                        "config": {}
+                    },
+                    {
+                        "path": "/bucket/:id",
+                        "method": "DELETE",
+                        "resource_handler": "endpoints.deleteBucket",
+                        "config": {}
+                    },
+                    {
+                        "path": "/",
+                        "method": "GET",
+                        "resource_handler": "endpoints.listObjects"
+                    },
+                    {
+                        "path": "/",
+                        "method": "POST",
+                        "resource_handler": "endpoints.addObject"
+                    },
+                    {
+                        "path": "/",
+                        "method": "DELETE",
+                        "resource_handler": "endpoints.deleteObject"
+                    }
+                ]
+            }
+        ]
+    }
+}
