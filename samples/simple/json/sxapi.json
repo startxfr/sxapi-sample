@@ -1,7 +1,7 @@
 {
     "name": "sxapi-sample-simple-json",
-    "description": "sxapi simple sample json response (v0.0.7). Display a static json response",
-    "version": "0.0.7",
+    "description": "sxapi simple sample json response (v0.0.8). Display a static json response",
+    "version": "0.0.8",
     "debug": true,
     "session": {},
     "plugins": [

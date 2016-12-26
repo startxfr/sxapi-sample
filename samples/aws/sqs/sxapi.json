@@ -1,0 +1,90 @@
+{
+    "name": "sxapi-sample-aws-sqs",
+    "description": "sxapi AWS sample for SQS endpoints (v0.0.8). Display dynamic content from a SQS message bus",
+    "version": "0.0.8",
+    "session": {},
+    "plugins": [
+    ],
+    "resources": {
+        "sqs-sample": {
+            "_class": "aws_sqs",
+            "read_options": {
+                "MaxNumberOfMessages": 10,
+                "VisibilityTimeout": 10,
+                "WaitTimeSeconds": 0
+            },
+            "delete_options": {
+            },
+            "send_options": {
+                "DelaySeconds": 10,
+                "MessageAttributes": {
+                    "from": {
+                        "DataType": "String",
+                        "StringValue": "startx"
+                    }
+                }
+            },
+            "QueueUrl": "https://sqs.eu-west-1.amazonaws.com/791728029433/test",
+            "ACCESS_ID": "AKIAJ7JDWBNTZOXZRM6A",
+            "ACCESS_KEY": "VQwNHhw/vAVbxDn9vRqC1KQUngz+DXolCnfpgkAl",
+            "SESSION_TOKEN": "",
+            "region": "eu-west-1"
+        }
+    },
+    "server": {
+        "type": "express",
+        "port": "8080",
+        "bodyParserJson": true,
+        "bodyParserUrl": true,
+        "endpoints": [
+            
+            {
+                "path": "/",
+                "method": "ROUTER",
+                "resource": "sqs-sample",
+                "endpoints": [
+                    {
+                        "path": "/queue",
+                        "method": "GET",
+                        "resource_handler": "endpoints.listQueue",
+                        "config": {}
+                    },
+                    {
+                        "path": "/queue/:id",
+                        "method": "POST",
+                        "resource_handler": "endpoints.addQueue",
+                        "config": {}
+                    },
+                    {
+                        "path": "/queue/:id",
+                        "method": "DELETE",
+                        "resource_handler": "endpoints.deleteQueue",
+                        "queueUrlPrefix": "https://sqs.eu-west-1.amazonaws.com/791728029433/",
+                        "config": {}
+                    },
+                    {
+                        "path": "/",
+                        "method": "GET",
+                        "resource_handler": "endpoints.listMessages",
+                        "config": {
+                            "QueueUrl": "https://sqs.eu-west-1.amazonaws.com/791728029433/test"
+                        }
+                    },
+                    {
+                        "path": "/",
+                        "method": "POST",
+                        "resource_handler": "endpoints.addMessage"
+                    },
+                    {
+                        "path": "/",
+                        "method": "DELETE",
+                        "resource_handler": "endpoints.deleteMessage",
+                        "config": {
+                            "QueueUrl": "https://sqs.eu-west-1.amazonaws.com/791728029433/test"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

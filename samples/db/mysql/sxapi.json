@@ -1,7 +1,7 @@
 {
     "name": "sxapi-sample-db-mysql",
-    "description": "sxapi database sample for mysql endpoints (v0.0.7). Display dynamic content from a simple database",
-    "version": "0.0.7",
+    "description": "sxapi database sample for mysql endpoints (v0.0.8). Display dynamic content from a simple database",
+    "version": "0.0.8",
     "session": {},
     "plugins": [
     ],
@@ -28,7 +28,7 @@
                 "method": "ROUTER",
                 "resource": "mysql-sample",
                 "table": "log",
-                "id_fields": "id",
+                "id_field": "id",
                 "endpoints": [
                     {
                         "path": "/",

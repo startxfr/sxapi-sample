@@ -1,7 +1,7 @@
 {
     "name": "sxapi-sample-simple-txt",
-    "description": "sxapi simple sample text response (v0.0.7). Display a static text response",
-    "version": "0.0.7",
+    "description": "sxapi simple sample text response (v0.0.8). Display a static text response",
+    "version": "0.0.8",
     "debug": true,
     "session": {},
     "plugins": [

@@ -1,5 +1,5 @@
 service:
-  image: startx/sxapi:0.0.7
+  image: startx/sxapi:0.0.8
   container_name: "myservice"
   cpu_shares: 4096
   mem_limit: 1g

@@ -1,7 +1,7 @@
 {
     "name": "sxapi-sample-db-couchbase",
-    "description": "sxapi database sample for couchbase endpoints (v0.0.7). Display dynamic content from a simple database",
-    "version": "0.0.7",
+    "description": "sxapi database sample for couchbase endpoints (v0.0.8). Display dynamic content from a simple database",
+    "version": "0.0.8",
     "session": {},
     "plugins": [
     ],

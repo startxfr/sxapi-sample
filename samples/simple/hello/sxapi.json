@@ -1,7 +1,7 @@
 {
     "name": "sxapi-sample-simple-hello",
-    "description": "sxapi simple sample hello world response (v0.0.7). Display a static txt content",
-    "version": "0.0.7",
+    "description": "sxapi simple sample hello world response (v0.0.8). Display a static txt content",
+    "version": "0.0.8",
     "debug": true,
     "session": {},
     "plugins": [
