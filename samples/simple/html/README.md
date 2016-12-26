@@ -1,6 +1,6 @@
 # sxapi Simple HTML Sample
 
-This section show you a sample config file for building microservice with a static HTML response. This sample must be used with sxapi-core engine (dev) 
+This section show you a sample config file for building microservice with a static HTML response. This sample must be used with sxapi-core engine (master) 
 
 SXAPI
 =====
@@ -9,8 +9,8 @@ is an open-source project for building simple and small microservices quickly an
 
 INSTALLING YOU ENVIRONEMENT
 ===========================
-Use the [sxapi-installer](https://github.com/startxfr/sxapi-installer/blob/dev/README.md) toget a full workstation environement with 
-[sxapi-console-cli](https://github.com/startxfr/sxapi-console/blob/dev/docs/2.CLI.md) ready to use
+Use the [sxapi-installer](https://github.com/startxfr/sxapi-installer/blob/master/README.md) toget a full workstation environement with 
+[sxapi-console-cli](https://github.com/startxfr/sxapi-console/blob/master/docs/2.CLI.md) ready to use
 Versionning is an important part of a microservice architecture. Be sure to follow the [developper guidline](https://github.com/startxfr/sxapi-core/blob/master/docs/2.Develop.md) to get a good worling environement
 
 RUNNING THIS SAMPLE

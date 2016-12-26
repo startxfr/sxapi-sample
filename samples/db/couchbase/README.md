@@ -1,6 +1,6 @@
 # sxapi DB Couchbase Sample
 
-This section show you a sample config file for building microservice based on Coucbase DB service. This sample must be used with sxapi-core engine (dev) 
+This section show you a sample config file for building microservice based on Coucbase DB service. This sample must be used with sxapi-core engine (master) 
 
 SXAPI
 =====
@@ -9,8 +9,8 @@ is an open-source project for building simple and small microservices quickly an
 
 INSTALLING YOU ENVIRONEMENT
 ===========================
-Use the [sxapi-installer](https://github.com/startxfr/sxapi-installer/blob/dev/README.md) toget a full workstation environement with 
-[sxapi-console-cli](https://github.com/startxfr/sxapi-console/blob/dev/docs/2.CLI.md) ready to use
+Use the [sxapi-installer](https://github.com/startxfr/sxapi-installer/blob/master/README.md) toget a full workstation environement with 
+[sxapi-console-cli](https://github.com/startxfr/sxapi-console/blob/master/docs/2.CLI.md) ready to use
 Versionning is an important part of a microservice architecture. Be sure to follow the [developper guidline](https://github.com/startxfr/sxapi-core/blob/master/docs/2.Develop.md) to get a good worling environement
 
 RUNNING THIS SAMPLE
@@ -26,11 +26,11 @@ RUNNING THIS SAMPLE
 AVAILABLES ENDPOINTS
 ====================
 
-1. [list endpoint](https://github.com/startxfr/sxapi-core/blob/dev/docs/resources/couchbase.md#list-endpoint)
-2. [get endpoint](https://github.com/startxfr/sxapi-core/blob/dev/docs/resources/couchbase.md#get-endpoint)
-3. [create endpoint](https://github.com/startxfr/sxapi-core/blob/dev/docs/resources/couchbase.md#create-endpoint)
-4. [update endpoint](https://github.com/startxfr/sxapi-core/blob/dev/docs/resources/couchbase.md#update-endpoint)
-5. [delete endpoint](https://github.com/startxfr/sxapi-core/blob/dev/docs/resources/couchbase.md#delete-endpoint)
+1. [list endpoint](https://github.com/startxfr/sxapi-core/blob/master/docs/resources/couchbase.md#list-endpoint)
+2. [get endpoint](https://github.com/startxfr/sxapi-core/blob/master/docs/resources/couchbase.md#get-endpoint)
+3. [create endpoint](https://github.com/startxfr/sxapi-core/blob/master/docs/resources/couchbase.md#create-endpoint)
+4. [update endpoint](https://github.com/startxfr/sxapi-core/blob/master/docs/resources/couchbase.md#update-endpoint)
+5. [delete endpoint](https://github.com/startxfr/sxapi-core/blob/master/docs/resources/couchbase.md#delete-endpoint)
 
 TROUBLESHOOTING
 ===============

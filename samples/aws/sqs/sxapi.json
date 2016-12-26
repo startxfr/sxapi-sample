@@ -1,7 +1,7 @@
 {
     "name": "sxapi-sample-aws-sqs",
-    "description": "sxapi AWS sample for SQS endpoints (dev). Display dynamic content from a SQS message bus",
-    "version": "dev",
+    "description": "sxapi AWS sample for SQS endpoints (master). Display dynamic content from a SQS message bus",
+    "version": "master",
     "session": {},
     "plugins": [
     ],
