@@ -3,18 +3,61 @@
     "description": "sxapi sample with various kind of response all packaged into one service (master). Display a static or simple dynamic content",
     "version": "master",
     "debug": true,
-    "session": {},
+    "session": {
+        "duration": 3600,
+        "auto_create": true,
+        "transport": {
+            "type": "cookie",
+            "cookie_name": "sxapi-sess"
+        },
+        "backend": {
+            "type": "mysql",
+            "resource": "mysql-sample",
+            "table": "sessions",
+            "sid_field": "token_sess",
+            "id_field": "id_sess",
+            "fields": {
+                "ip": "ip_sess",
+                "start": "start_sess",
+                "stop": "stop_sess"
+            }
+        }
+    },
     "resources": {
+        "s3-sample": {
+            "_class": "aws_s3",
+            "read_options": {
+            },
+            "delete_options": {
+            },
+            "send_options": {
+            },
+            "ACCESS_ID": "AKIAJ7JDWBNTZOXZRM6A",
+            "ACCESS_KEY": "VQwNHhw/vAVbxDn9vRqC1KQUngz+DXolCnfpgkAl",
+            "SESSION_TOKEN": "",
+            "region": "eu-west-1"
+        },
         "sqs-sample": {
-            "_class": "sqs",
-            "config": {
-                "QueueUrl": "https://sqs.eu-west-1.amazonaws.com/791728029433/admin",
+            "_class": "aws_sqs",
+            "read_options": {
                 "MaxNumberOfMessages": 10,
                 "VisibilityTimeout": 10,
                 "WaitTimeSeconds": 0
             },
-            "ACCESS_ID": ">>>>>>YOUR ID<<<<<<",
-            "ACCESS_KEY": ">>>>>>YOUR KEY<<<<<<",
+            "delete_options": {
+            },
+            "send_options": {
+                "DelaySeconds": 10,
+                "MessageAttributes": {
+                    "from": {
+                        "DataType": "String",
+                        "StringValue": "startx"
+                    }
+                }
+            },
+            "QueueUrl": "https://sqs.eu-west-1.amazonaws.com/791728029433/test",
+            "ACCESS_ID": "AKIAJ7JDWBNTZOXZRM6A",
+            "ACCESS_KEY": "VQwNHhw/vAVbxDn9vRqC1KQUngz+DXolCnfpgkAl",
             "SESSION_TOKEN": "",
             "region": "eu-west-1"
         },
@@ -23,6 +66,17 @@
             "cluster": "http://172.17.42.1:8091",
             "bucket": "beer-sample"
         },
+        "serviceinfo-sample": {
+            "_class": "serviceinfo"
+        },
+        "redis-sample": {
+            "_class": "redis",
+            "url": "redis://172.17.42.1:6379"
+        },
+        "http-sample": {
+            "_class": "http",
+            "url": "https://adobe.github.io/Spry/data/json/array-02.js"
+        },
         "mysql-sample": {
             "_class": "mysql",
             "server": {
@@ -30,7 +84,7 @@
                 "port": "3306",
                 "user": "dev",
                 "password": "dev",
-                "database": "udi"
+                "database": "sxapi"
             }
         }
     },
@@ -81,9 +135,107 @@
             },
             {
                 "path": "/message",
-                "method": "POST",
+                "method": "ROUTER",
                 "resource": "sqs-sample",
-                "resource_handler": "endpoints.addMessage"
+                "endpoints": [
+                    {
+                        "path": "/message/queue",
+                        "method": "GET",
+                        "resource_handler": "endpoints.listQueue",
+                        "config": {}
+                    },
+                    {
+                        "path": "/message/queue/:id",
+                        "method": "POST",
+                        "resource_handler": "endpoints.addQueue",
+                        "config": {}
+                    },
+                    {
+                        "path": "/message/queue/:id",
+                        "method": "DELETE",
+                        "resource_handler": "endpoints.deleteQueue",
+                        "queueUrlPrefix": "https://sqs.eu-west-1.amazonaws.com/791728029433/",
+                        "config": {}
+                    },
+                    {
+                        "path": "/message",
+                        "method": "GET",
+                        "resource_handler": "endpoints.listMessages",
+                        "config": {
+                            "QueueUrl": "https://sqs.eu-west-1.amazonaws.com/791728029433/test"
+                        }
+                    },
+                    {
+                        "path": "/message",
+                        "method": "POST",
+                        "resource_handler": "endpoints.addMessage"
+                    },
+                    {
+                        "path": "/message",
+                        "method": "DELETE",
+                        "resource_handler": "endpoints.deleteMessage",
+                        "config": {
+                            "QueueUrl": "https://sqs.eu-west-1.amazonaws.com/791728029433/test"
+                        }
+                    }
+                ]
+            },
+            {
+                "path": "/s3store",
+                "method": "ROUTER",
+                "resource": "s3-sample",
+                "endpoints": [
+                    {
+                        "path": "/s3store/bucket",
+                        "method": "GET",
+                        "resource_handler": "endpoints.listBuckets",
+                        "config": {}
+                    },
+                    {
+                        "path": "/s3store/bucket/:id",
+                        "method": "POST",
+                        "resource_handler": "endpoints.addBucket",
+                        "config": {}
+                    },
+                    {
+                        "path": "/s3store/bucket/:id",
+                        "method": "GET",
+                        "resource_handler": "endpoints.infoBucket",
+                        "config": {}
+                    },
+                    {
+                        "path": "/s3store/bucket/:id",
+                        "method": "DELETE",
+                        "resource_handler": "endpoints.deleteBucket",
+                        "config": {}
+                    },
+                    {
+                        "path": "/s3store",
+                        "method": "GET",
+                        "resource_handler": "endpoints.listObjects"
+                    },
+                    {
+                        "path": "/s3store",
+                        "method": "POST",
+                        "resource_handler": "endpoints.addObject"
+                    },
+                    {
+                        "path": "/s3store",
+                        "method": "DELETE",
+                        "resource_handler": "endpoints.deleteObject"
+                    }
+                ]
+            },
+            {
+                "path": "/info",
+                "resource": "serviceinfo-sample",
+                "resource_handler": "endpoints.info"
+            },
+            {
+                "path": "/http",
+                "resource": "http-sample",
+                "resource_handler": "endpoints.call",
+                "url": "https://adobe.github.io/Spry/data/json/object-01.js"
             },
             {
                 "path": "/beer",
@@ -124,11 +276,43 @@
                 ]
             },
             {
+                "path": "/redis",
+                "method": "ROUTER",
+                "resource": "redis-sample",
+                "endpoints": [
+                    {
+                        "path": "/redis",
+                        "method": "POST",
+                        "resource_handler": "endpoints.create"
+                    },
+                    {
+                        "path": "/redis/:id",
+                        "method": "POST",
+                        "resource_handler": "endpoints.create"
+                    },
+                    {
+                        "path": "/redis/:id",
+                        "method": "GET",
+                        "resource_handler": "endpoints.get"
+                    },
+                    {
+                        "path": "/redis/:id",
+                        "method": "PUT",
+                        "resource_handler": "endpoints.update"
+                    },
+                    {
+                        "path": "/redis/:id",
+                        "method": "DELETE",
+                        "resource_handler": "endpoints.delete"
+                    }
+                ]
+            },
+            {
                 "path": "/mysql",
                 "method": "ROUTER",
                 "resource": "mysql-sample",
                 "table": "sessions",
-                "id_fields": "id_sess",
+                "id_field": "id_sess",
                 "endpoints": [
                     {
                         "path": "/mysql",

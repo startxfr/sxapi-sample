@@ -28,7 +28,7 @@
                 "method": "ROUTER",
                 "resource": "mysql-sample",
                 "table": "log",
-                "id_fields": "id",
+                "id_field": "id",
                 "endpoints": [
                     {
                         "path": "/",

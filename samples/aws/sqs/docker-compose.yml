@@ -9,14 +9,3 @@ sxapi:
   volumes:
     - "~/sxapi-data:/data"
     - "./:/conf"
-    
-couchbase:
-  image: couchbase:latest
-  ports:
-    - "8091-8094:8091-8094"
-    - "11210:11210"
-
-redis:
-  image: redis:latest
-  ports:
-    - "6379:6379"

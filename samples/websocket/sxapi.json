@@ -6,7 +6,7 @@
     "session": {},
     "resources": {
         "sqs-sample": {
-            "_class": "sqs",
+            "_class": "aws_sqs",
             "config": {
                 "QueueUrl": "https://sqs.eu-west-1.amazonaws.com/791728029433/admin",
                 "MaxNumberOfMessages": 10,
@@ -133,7 +133,7 @@
                 "method": "ROUTER",
                 "resource": "mysql-sample",
                 "table": "sessions",
-                "id_fields": "id_sess",
+                "id_field": "id_sess",
                 "endpoints": [
                     {
                         "path": "/mysql",
