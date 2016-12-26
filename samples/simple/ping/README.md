@@ -11,8 +11,20 @@ INSTALLING YOU ENVIRONEMENT
 ===========================
 Use the [sxapi-installer](https://github.com/startxfr/sxapi-installer/blob/dev/README.md) toget a full workstation environement with 
 [sxapi-console-cli](https://github.com/startxfr/sxapi-console/blob/dev/docs/2.CLI.md) ready to use
+Versionning is an important part of a microservice architecture. Be sure to follow the [developper guidline](https://github.com/startxfr/sxapi-core/blob/master/docs/2.Develop.md) to get a good worling environement
 
 RUNNING THIS SAMPLE
 ===================
-run ```sxapi-cli setup simple/ping```
 
+1. Check that you have a fully working dev environment (```sxapi-cli version```)
+2. Check that you are inside a versioned project (```git status```)
+3. Create a sub-directory for hosting your microservice (```mkdir simple-ping; cd simple-ping```) 
+4. Setup this sample in your directory ```sxapi-cli setup simple/ping```
+5. Start your micro-service ```sxapi-cli start```
+6. Visit your service ```firefox http://localhost:8080/```
+
+TROUBLESHOOTING
+===============
+
+1. sxapi-myapi conflict name
+   If you encounter a container name conflict, you can remove the running one ```docker rm -f sxapi-myapi``` or rename your container by changing the first line in docker-compose.yml file.
