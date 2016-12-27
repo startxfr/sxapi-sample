@@ -1,11 +1,3 @@
-simple-full:
-  extends:
-    file: full/docker-compose.yml
-    service: "sxapi"
-  container_name: "sxapi-sample-simple-full-dev"
-  ports:
-    - "1981:8080"
-    
 simple-hello:
   extends:
     file: hello/docker-compose.yml

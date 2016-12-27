@@ -26,16 +26,21 @@
     "resources": {
         "s3-sample": {
             "_class": "aws_s3",
-            "read_options": {
+            "listObjects_options": {
             },
-            "delete_options": {
+            "getObject_options": {
             },
-            "send_options": {
+            "addObject_options": {
+            },
+            "updateObject_options": {
+            },
+            "deleteObject_options": {
             },
             "ACCESS_ID": "AKIAJ7JDWBNTZOXZRM6A",
             "ACCESS_KEY": "VQwNHhw/vAVbxDn9vRqC1KQUngz+DXolCnfpgkAl",
             "SESSION_TOKEN": "",
-            "region": "eu-west-1"
+            "region": "eu-west-1",
+            "Bucket": "sxapitest"
         },
         "sqs-sample": {
             "_class": "aws_sqs",
@@ -186,36 +191,30 @@
                 "resource": "s3-sample",
                 "endpoints": [
                     {
-                        "path": "/s3store/bucket",
+                        "path": "/s3store",
                         "method": "GET",
-                        "resource_handler": "endpoints.listBuckets",
-                        "config": {}
+                        "resource_handler": "endpoints.listObjects",
+                        "Bucket": "sxapitest"
                     },
                     {
-                        "path": "/s3store/bucket/:id",
+                        "path": "/s3store/:id",
+                        "method": "GET",
+                        "resource_handler": "endpoints.getObject",
+                        "bucket": "sxapitest"
+                    },
+                    {
+                        "path": "/s3store/:id",
                         "method": "POST",
-                        "resource_handler": "endpoints.addBucket",
-                        "config": {}
+                        "resource_handler": "endpoints.addObject",
+                        "bucket": "sxapitest"
                     },
                     {
-                        "path": "/s3store/bucket/:id",
+                        "path": "/s3store/:bid/:id",
                         "method": "GET",
-                        "resource_handler": "endpoints.infoBucket",
-                        "config": {}
+                        "resource_handler": "endpoints.getObject"
                     },
                     {
-                        "path": "/s3store/bucket/:id",
-                        "method": "DELETE",
-                        "resource_handler": "endpoints.deleteBucket",
-                        "config": {}
-                    },
-                    {
-                        "path": "/s3store",
-                        "method": "GET",
-                        "resource_handler": "endpoints.listObjects"
-                    },
-                    {
-                        "path": "/s3store",
+                        "path": "/s3store/:bid/:id",
                         "method": "POST",
                         "resource_handler": "endpoints.addObject"
                     },
@@ -223,6 +222,30 @@
                         "path": "/s3store",
                         "method": "DELETE",
                         "resource_handler": "endpoints.deleteObject"
+                    },
+                    {
+                        "path": "/s3store-bucket",
+                        "method": "GET",
+                        "resource_handler": "endpoints.listBuckets",
+                        "config": {}
+                    },
+                    {
+                        "path": "/s3store-bucket/:id",
+                        "method": "POST",
+                        "resource_handler": "endpoints.addBucket",
+                        "config": {}
+                    },
+                    {
+                        "path": "/s3store-bucket/:id",
+                        "method": "GET",
+                        "resource_handler": "endpoints.infoBucket",
+                        "config": {}
+                    },
+                    {
+                        "path": "/s3store-bucket/:id",
+                        "method": "DELETE",
+                        "resource_handler": "endpoints.deleteBucket",
+                        "config": {}
                     }
                 ]
             },
