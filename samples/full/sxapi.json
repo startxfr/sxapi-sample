@@ -82,6 +82,29 @@
             "_class": "http",
             "url": "https://adobe.github.io/Spry/data/json/array-02.js"
         },
+        "google-sample": {
+            "_class": "google",
+            "auth": {
+                "method": "jwt",
+                "jwt": {
+                    "type": "service_account",
+                    "project_id": "startx.fr:sxapi2",
+                    "private_key_id": "8b12fe4bcd48e8dab9bb68076790b0948dd57dc5",
+                    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDpsol+AVG37aH3\nMXNmw/aV+BPrlopqTv7zRo8xJx6vqY71ABv/qBwQKekl7O4Kgjl2U+ONptiWe/Vx\nv7KnsvfEpmZYnVuVvl6YS1DLbkLa8+Z39hk4UkTPcyz8V1Cum18aUT/6ofmk1GXi\nbvlnQdr251xp+knwhSRXPr9L0MhKyAHqEFNWnQ/Ih70GkWwDeruamKuNr6wIxTmb\nvkdwEJIW2V21cNh1hoD8FuTJIRteoPVHlHeywuH+oz8GVp9jOaB2Q7ToIOwUvyMm\nLNArbkhjllNE/oT+8zYMT6wxIOmyi+ELbgz742zu+jQOaSUW/eWMnAjk5Dj/TBM3\nqSV3vPLrAgMBAAECggEAXdNYcEaHUJkPlfc8pd23eq6HEOb324arxXBmvQ0/vLcO\ntj68/v+3hKXO/XMKfx2ZhHBZw91gx8os2OZmC/5Gi6VjIeDLjGtJ/0r9vS8fmFik\nBzW/GmWtSryrKwTDV9b5b89/KFkvqYW9AhQb/eDq0IZDDCl41iAeXwjKNN42DA9M\ni0tw5KE9jrqBHzFniVSQpwYdso1AzLb0H8KBqx/DB5cIz4e4RjYL8fnE35yr6dVh\n7+/2c2Hpc3HtL4tnbqLDdvzj0qju3k5edysPOE7UqGujkMhdip7vE21jK/r3WDUF\nrhz49n9JT6Hq9mIVY7ulLRxsVovHRVMEgRrNvWBOgQKBgQD3IaHhWX+lUjCsJyrU\nB9LMLOtBwIFgDo8bZd/V652eGZ4v1dMlVpTt4oUou+EWt1fFUiLy7BR3zYxyWn1t\nzlx/z1YlQoNUJ9t4WY3RODXPwj6GMi46iV5P/MeMZGr5xSJzAkCfIzhjW75GVbMs\nKKxbRgz/gLt6dYEoiAOdDUwfMwKBgQDyFX0JnGw93O0iNqEjW/ngXw5th/TmTjKv\nYrcfbJ4XfQQ5QFwqEr1nbyHlhkTPRebEVrgNk+3hnd6slr/UUKilbADWP3MUn+/r\nMWcgOxTaKkCRQMan1R6mhi/faqgM2ekZoclXjT5NsQN5CyrELg40LrnBDa7gJv9c\nITcEo5c9aQKBgDnowqMosrWNneQpRWrr7mRzvijpMCfPIY+c/qeFD6klfaDd7R1Z\nvYpEw0k5RVRqYAHX7mKYGW+9VcTSGYQqkBhPAHO4s0d8E3yPF6FIF6v4a2hMx/Jl\nkBkUNbpbKYofvKPQik4AFc2KiPq4SET3vvOgZZlVlBjtAff6b0ZVAFprAoGAOPK3\nJGCo0fC71BWX2JKVeKPD6B5YjSkOIVYOkBTkJ9BgAvvR8o/QAJoTFkR8wWnHPJ7N\n01veVPnnXSBlZhPHaIq8s6nfb5WkQeawRNPBNwVDhSgA05B+Elx0vJEBkWxduorl\nq3PtmScwEvR+jgHrk3j+d5y5a7+gyNKDd9LoDCkCgYEAzvyQdhvRzvkKiQRb9dK2\nAnDIR9fbgRiBwMIp+lQ90cREgv2o4hIWuVKwCZEQScbCxjSREBFMI8mgjGkOWQcX\nR1Cne+SVoocBxela7sq9cDm3TSBwB68dK11kmRLIXAwb+IiJ1snVzDkEoCCbxIAt\n04ld8ptavQAEdHpqvkW67pA=\n-----END PRIVATE KEY-----\n",
+                    "client_email": "703694493039-316if153vnpl4snnui3rje49clv1ce5k@developer.gserviceaccount.com",
+                    "client_id": "703694493039-316if153vnpl4snnui3rje49clv1ce5k.apps.googleusercontent.com",
+                    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+                    "token_uri": "https://accounts.google.com/o/oauth2/token",
+                    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+                    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/703694493039-316if153vnpl4snnui3rje49clv1ce5k%40developer.gserviceaccount.com"
+                },
+                "scopes": "https://www.googleapis.com/auth/calendar https://www.googleapis.com/auth/drive"
+            },
+            "services": {
+                "drive": {
+                }
+            }
+        },
         "mysql-sample": {
             "_class": "mysql",
             "server": {
@@ -112,6 +135,50 @@
                     "Content-Type": "application/json"
                 },
                 "body": "{\"health\":\"good\"}"
+            },
+            {
+                "path": "/google",
+                "method": "ROUTER",
+                "resource": "s3-sample",
+                "endpoints": [
+                    {
+                        "path": "/google/token",
+                        "method": "GET",
+                        "resource": "google-sample",
+                        "resource_handler": "endpoints.getToken"
+                    },
+                    {
+                        "path": "/google/file/:id",
+                        "method": "GET",
+                        "resource": "google-sample",
+                        "resource_handler": "endpoints.drive.getFile"
+                    },
+                    {
+                        "path": "/google/:q",
+                        "method": "GET",
+                        "resource": "google-sample",
+                        "resource_handler": "endpoints.drive.findFile"
+                    },
+                    {
+                        "path": "/google/directory",
+                        "method": "GET",
+                        "resource": "google-sample",
+                        "resource_handler": "endpoints.drive.listDirectory"
+                    },
+                    {
+                        "path": "/google/directory/:id",
+                        "method": "GET",
+                        "resource": "google-sample",
+                        "resource_handler": "endpoints.drive.listDirectory"
+                    },
+                    {
+                        "path": "/google/directory/:name",
+                        "method": "POST",
+                        "resource": "google-sample",
+                        "resource_handler": "endpoints.drive.addDirectory",
+                        "parent": "root"
+                    }
+                ]
             },
             {
                 "path": "/html",
