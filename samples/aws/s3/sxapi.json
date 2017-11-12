@@ -1,7 +1,7 @@
 {
     "name": "sxapi-sample-aws-s3",
-    "description": "sxapi AWS sample for S3 endpoints (v0.0.8). Display dynamic content from a S3 bucket",
-    "version": "0.0.8",
+    "description": "sxapi AWS sample for S3 endpoints (v0.0.17). Display dynamic content from a S3 bucket",
+    "version": "0.0.17",
     "session": {},
     "plugins": [
     ],

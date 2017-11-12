@@ -1,6 +1,6 @@
 # sxapi AWS Samples
 
-This section show you some sample config file for building microservices based on AWS services. Theses samples must be used with sxapi-core engine (v0.0.8) 
+This section show you some sample config file for building microservices based on AWS services. Theses samples must be used with sxapi-core engine (v0.0.17) 
 
 SXAPI
 =====
@@ -9,9 +9,9 @@ is an open-source project for building simple and small microservices quickly an
 
 INSTALLING YOU ENVIRONEMENT
 ===========================
-Use the [sxapi-installer](https://github.com/startxfr/sxapi-installer/blob/v0.0.8/README.md) toget a full workstation environement with 
-[sxapi-console-cli](https://github.com/startxfr/sxapi-console/blob/v0.0.8/docs/2.CLI.md) ready to use
-Versionning is an important part of a microservice architecture. Be sure to follow the [developper guidline](https://github.com/startxfr/sxapi-core/blob/v0.0.8/docs/2.Develop.md) to get a good worling environement
+Use the [sxapi-installer](https://github.com/startxfr/sxapi-installer/blob/v0.0.17/README.md) toget a full workstation environement with 
+[sxapi-console-cli](https://github.com/startxfr/sxapi-console/blob/v0.0.17/docs/2.CLI.md) ready to use
+Versionning is an important part of a microservice architecture. Be sure to follow the [developper guidline](https://github.com/startxfr/sxapi-core/blob/v0.0.17/docs/2.Develop.md) to get a good worling environement
 
 SAMPLE LIST
 ===========

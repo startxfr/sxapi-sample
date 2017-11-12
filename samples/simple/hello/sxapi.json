@@ -1,22 +1,8 @@
 {
     "name": "sxapi-sample-simple-hello",
-    "description": "sxapi simple sample hello world response (v0.0.8). Display a static txt content",
-    "version": "0.0.8",
-    "debug": true,
-    "session": {},
-    "plugins": [
-    ],
-    "log": {
-        "filters": {
-            "level": "0,1,2,3,4",
-            "type": "debug,info,error,warn"
-        }
-    },
+    "description": "sxapi simple sample hello world response (v0.0.17). Display a static txt content",
+    "version": "0.0.17",
     "server": {
-        "type": "express",
-        "port": "8080",
-        "bodyParserJson": false,
-        "bodyParserUrl": true,
         "endpoints": [
             {
                 "path": "/",

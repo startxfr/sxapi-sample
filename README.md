@@ -1,8 +1,8 @@
 # sxapi-sample
 
-Sample config file and modules for building microservices using sxapi project (version 0.0.8) 
+Sample config file and modules for building microservices using sxapi project (version 0.0.17) 
 
-[![Build Status](https://travis-ci.org/startxfr/sxapi-sample.svg?branch=v0.0.8)](https://travis-ci.org/startxfr/sxapi-sample)
+[![Build Status](https://travis-ci.org/startxfr/sxapi-sample.svg?branch=v0.0.17)](https://travis-ci.org/startxfr/sxapi-sample)
 
 SXAPI
 =====

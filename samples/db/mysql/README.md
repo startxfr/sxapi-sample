@@ -1,6 +1,6 @@
 # sxapi DB MySQL Sample
 
-This section show you a sample config file for building microservice based on MySQL DB service. This sample must be used with sxapi-core engine (v0.0.8) 
+This section show you a sample config file for building microservice based on MySQL DB service. This sample must be used with sxapi-core engine (v0.0.17) 
 
 SXAPI
 =====
@@ -9,9 +9,9 @@ is an open-source project for building simple and small microservices quickly an
 
 INSTALLING YOU ENVIRONEMENT
 ===========================
-Use the [sxapi-installer](https://github.com/startxfr/sxapi-installer/blob/v0.0.8/README.md) toget a full workstation environement with 
-[sxapi-console-cli](https://github.com/startxfr/sxapi-console/blob/v0.0.8/docs/2.CLI.md) ready to use
-Versionning is an important part of a microservice architecture. Be sure to follow the [developper guidline](https://github.com/startxfr/sxapi-core/blob/v0.0.8/docs/2.Develop.md) to get a good worling environement
+Use the [sxapi-installer](https://github.com/startxfr/sxapi-installer/blob/v0.0.17/README.md) toget a full workstation environement with 
+[sxapi-console-cli](https://github.com/startxfr/sxapi-console/blob/v0.0.17/docs/2.CLI.md) ready to use
+Versionning is an important part of a microservice architecture. Be sure to follow the [developper guidline](https://github.com/startxfr/sxapi-core/blob/v0.0.17/docs/2.Develop.md) to get a good worling environement
 
 RUNNING THIS SAMPLE
 ===================
@@ -26,11 +26,11 @@ RUNNING THIS SAMPLE
 AVAILABLES ENDPOINTS
 ====================
 
-1. [list endpoint](https://github.com/startxfr/sxapi-core/blob/v0.0.8/docs/resources/mysql.md#list-endpoint)
-2. [get endpoint](https://github.com/startxfr/sxapi-core/blob/v0.0.8/docs/resources/mysql.md#get-endpoint)
-3. [create endpoint](https://github.com/startxfr/sxapi-core/blob/v0.0.8/docs/resources/mysql.md#create-endpoint)
-4. [update endpoint](https://github.com/startxfr/sxapi-core/blob/v0.0.8/docs/resources/mysql.md#update-endpoint)
-5. [delete endpoint](https://github.com/startxfr/sxapi-core/blob/v0.0.8/docs/resources/mysql.md#delete-endpoint)
+1. [list endpoint](https://github.com/startxfr/sxapi-core/blob/v0.0.17/docs/resources/mysql.md#list-endpoint)
+2. [get endpoint](https://github.com/startxfr/sxapi-core/blob/v0.0.17/docs/resources/mysql.md#get-endpoint)
+3. [create endpoint](https://github.com/startxfr/sxapi-core/blob/v0.0.17/docs/resources/mysql.md#create-endpoint)
+4. [update endpoint](https://github.com/startxfr/sxapi-core/blob/v0.0.17/docs/resources/mysql.md#update-endpoint)
+5. [delete endpoint](https://github.com/startxfr/sxapi-core/blob/v0.0.17/docs/resources/mysql.md#delete-endpoint)
 
 TROUBLESHOOTING
 ===============

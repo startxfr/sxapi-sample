@@ -1,6 +1,6 @@
 {
-    "name": "sxapi-sample-simple-ping",
-    "description": "sxapi simple sample ping response (v0.0.17). Display a dynamic json response to a ping",
+    "name": "myservice-service1",
+    "description": "",
     "version": "0.0.17",
     "debug": true,
     "session": {},
@@ -15,16 +15,15 @@
     "server": {
         "type": "express",
         "port": "8080",
-        "bodyParserJson": true,
+        "bodyParserJson": false,
         "bodyParserUrl": true,
         "endpoints": [
             {
                 "path": "/",
-                "code": "200",
                 "header": {
-                    "Content-Type": "application/json"
+                    "Content-Type": "text/plain"
                 },
-                "body": "{\"health\":\"good\"}"
+                "body": "my service 1"
             }
         ]
     }
