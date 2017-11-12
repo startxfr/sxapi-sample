@@ -148,16 +148,23 @@
                         "resource_handler": "endpoints.getToken"
                     },
                     {
+                        "path": "/google/:q",
+                        "method": "GET",
+                        "resource": "google-sample",
+                        "resource_handler": "endpoints.drive.findFile"
+                    },
+                    {
                         "path": "/google/file/:id",
                         "method": "GET",
                         "resource": "google-sample",
                         "resource_handler": "endpoints.drive.getFile"
                     },
                     {
-                        "path": "/google/:q",
-                        "method": "GET",
+                        "path": "/google/file/:name",
+                        "method": "POST",
                         "resource": "google-sample",
-                        "resource_handler": "endpoints.drive.findFile"
+                        "resource_handler": "endpoints.drive.addFile",
+                        "parent": "root"
                     },
                     {
                         "path": "/google/directory",
