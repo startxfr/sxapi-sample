@@ -11,5 +11,5 @@ before browsing this section
 
 Example list
 ------------
-1. [Sample microservice based on AWS S3](s3/README.md)
-2. [Sample microservice based on AWS SQS](sqs/README.md)
+1. [Sample microservice based on AWS S3](s3/)
+2. [Sample microservice based on AWS SQS](sqs/)

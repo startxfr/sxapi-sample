@@ -13,13 +13,13 @@ Running this sample
 -------------------
 
 ```bash
-/* create a working directory */
+// create a working directory
 mkdir test; mkdir test/modules; cd test
-/* download a copy of this example */
+// download a copy of this example
 wget https://raw.githubusercontent.com/startxfr/sxapi-sample/dev/samples/simple/module/sxapi.json
 cd modules; wget https://raw.githubusercontent.com/startxfr/sxapi-sample/dev/samples/simple/module/modules/module.js; cd -
-/* update docker image */
+// update docker image
 docker pull startx/sxapi:latest
-/* start application with this config file */
+// start application with this config file
 docker run -d -v $(pwd)/sxapi.json:/conf/sxapi.json:ro -v $(pwd)/modules:/app/modules:ro startx/sxapi:latest
 ```

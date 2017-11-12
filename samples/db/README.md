@@ -11,5 +11,5 @@ before browsing this section
 
 Example list
 ------------
-1. [Sample microservice based on couchbase](couchbase/README.md)
-2. [Sample microservice based on mysql](mysql/README.md)
+1. [Sample microservice based on couchbase](couchbase/)
+2. [Sample microservice based on mysql](mysql/)
