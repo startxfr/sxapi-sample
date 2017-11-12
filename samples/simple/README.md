@@ -7,6 +7,7 @@ Theses samples must be used with
 [sxapi-core framework](https://github.com/startxfr/sxapi-core) and you should
 read 
 [sxapi-core documentation](https://github.com/startxfr/sxapi-core/tree/master/docs) 
+before browsing this section 
 
 Example list
 ------------
