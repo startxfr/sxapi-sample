@@ -5,7 +5,7 @@ This section show you some sample  config file and modules for starting your
 microservice API. Theses samples must be used with 
 [sxapi-core framework](https://github.com/startxfr/sxapi-core) and you should
 read 
-[sxapi-core documentation](https://github.com/startxfr/sxapi-core/tree/v0.0.57-docker/docs)
+[sxapi-core documentation](https://github.com/startxfr/sxapi-core/tree/v0.0.66-docker/docs)
 before browsing this section 
 
 - [AWS](aws/) Configuration examples using AWS services

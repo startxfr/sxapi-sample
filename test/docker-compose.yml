@@ -1,5 +1,5 @@
 sxapi:
-  image: startx/sxapi:0.0.57
+  image: startx/sxapi:0.0.66
   container_name: "sxapi-myapi"
   cpu_shares: 4096
   mem_limit: 1g
