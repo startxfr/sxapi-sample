@@ -33,28 +33,28 @@
                     {
                         "path": "/",
                         "method": "GET",
-                        "resource_handler": "endpoints.list",
+                        "endpoint": "list",
                         "sql": "SELECT * FROM `log` LIMIT 10"
                     },
                     {
                         "path": "/",
                         "method": "POST",
-                        "resource_handler": "endpoints.create"
+                        "endpoint": "create"
                     },
                     {
                         "path": "/:id",
                         "method": "GET",
-                        "resource_handler": "endpoints.get"
+                        "endpoint": "get"
                     },
                     {
                         "path": "/:id",
                         "method": "PUT",
-                        "resource_handler": "endpoints.update"
+                        "endpoint": "update"
                     },
                     {
                         "path": "/:id",
                         "method": "DELETE",
-                        "resource_handler": "endpoints.delete"
+                        "endpoint": "delete"
                     }
                 ]
             }

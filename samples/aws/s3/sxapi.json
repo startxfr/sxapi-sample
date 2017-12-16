@@ -34,41 +34,41 @@
                     {
                         "path": "/bucket",
                         "method": "GET",
-                        "resource_handler": "endpoints.listBuckets",
+                        "endpoint": "listBuckets",
                         "config": {}
                     },
                     {
                         "path": "/bucket/:id",
                         "method": "POST",
-                        "resource_handler": "endpoints.addBucket",
+                        "endpoint": "addBucket",
                         "config": {}
                     },
                     {
                         "path": "/bucket/:id",
                         "method": "GET",
-                        "resource_handler": "endpoints.infoBucket",
+                        "endpoint": "infoBucket",
                         "config": {}
                     },
                     {
                         "path": "/bucket/:id",
                         "method": "DELETE",
-                        "resource_handler": "endpoints.deleteBucket",
+                        "endpoint": "deleteBucket",
                         "config": {}
                     },
                     {
                         "path": "/",
                         "method": "GET",
-                        "resource_handler": "endpoints.listObjects"
+                        "endpoint": "listObjects"
                     },
                     {
                         "path": "/",
                         "method": "POST",
-                        "resource_handler": "endpoints.addObject"
+                        "endpoint": "addObject"
                     },
                     {
                         "path": "/",
                         "method": "DELETE",
-                        "resource_handler": "endpoints.deleteObject"
+                        "endpoint": "deleteObject"
                     }
                 ]
             }
