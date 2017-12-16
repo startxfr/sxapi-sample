@@ -139,50 +139,50 @@
             {
                 "path": "/google",
                 "method": "ROUTER",
-                "resource": "s3-sample",
+                "resource": "google-sample",
                 "endpoints": [
                     {
                         "path": "/google/token",
                         "method": "GET",
                         "resource": "google-sample",
-                        "resource_handler": "endpoints.getToken"
+                        "endpoint": "getToken"
                     },
                     {
                         "path": "/google/:q",
                         "method": "GET",
                         "resource": "google-sample",
-                        "resource_handler": "endpoints.drive.findFile"
+                        "endpoint": "drive.findFile"
                     },
                     {
                         "path": "/google/file/:id",
                         "method": "GET",
                         "resource": "google-sample",
-                        "resource_handler": "endpoints.drive.getFile"
+                        "endpoint": "drive.getFile"
                     },
                     {
                         "path": "/google/file/:name",
                         "method": "POST",
                         "resource": "google-sample",
-                        "resource_handler": "endpoints.drive.addFile",
+                        "endpoint": "drive.addFile",
                         "parent": "root"
                     },
                     {
                         "path": "/google/directory",
                         "method": "GET",
                         "resource": "google-sample",
-                        "resource_handler": "endpoints.drive.listDirectory"
+                        "endpoint": "drive.listDirectory"
                     },
                     {
                         "path": "/google/directory/:id",
                         "method": "GET",
                         "resource": "google-sample",
-                        "resource_handler": "endpoints.drive.listDirectory"
+                        "endpoint": "drive.listDirectory"
                     },
                     {
                         "path": "/google/directory/:name",
                         "method": "POST",
                         "resource": "google-sample",
-                        "resource_handler": "endpoints.drive.addDirectory",
+                        "endpoint": "drive.addDirectory",
                         "parent": "root"
                     }
                 ]
@@ -220,26 +220,26 @@
                     {
                         "path": "/message/queue",
                         "method": "GET",
-                        "resource_handler": "endpoints.listQueue",
+                        "endpoint": "listQueue",
                         "config": {}
                     },
                     {
                         "path": "/message/queue/:id",
                         "method": "POST",
-                        "resource_handler": "endpoints.addQueue",
+                        "endpoint": "addQueue",
                         "config": {}
                     },
                     {
                         "path": "/message/queue/:id",
                         "method": "DELETE",
-                        "resource_handler": "endpoints.deleteQueue",
+                        "endpoint": "deleteQueue",
                         "queueUrlPrefix": "https://sqs.eu-west-1.amazonaws.com/791728029433/",
                         "config": {}
                     },
                     {
                         "path": "/message",
                         "method": "GET",
-                        "resource_handler": "endpoints.listMessages",
+                        "endpoint": "listMessages",
                         "config": {
                             "QueueUrl": "https://sqs.eu-west-1.amazonaws.com/791728029433/test"
                         }
@@ -247,12 +247,12 @@
                     {
                         "path": "/message",
                         "method": "POST",
-                        "resource_handler": "endpoints.addMessage"
+                        "endpoint": "addMessage"
                     },
                     {
                         "path": "/message",
                         "method": "DELETE",
-                        "resource_handler": "endpoints.deleteMessage",
+                        "endpoint": "deleteMessage",
                         "config": {
                             "QueueUrl": "https://sqs.eu-west-1.amazonaws.com/791728029433/test"
                         }
@@ -267,58 +267,58 @@
                     {
                         "path": "/s3store",
                         "method": "GET",
-                        "resource_handler": "endpoints.listObjects",
+                        "endpoint": "listObjects",
                         "Bucket": "sxapitest"
                     },
                     {
                         "path": "/s3store/:id",
                         "method": "GET",
-                        "resource_handler": "endpoints.getObject",
+                        "endpoint": "getObject",
                         "bucket": "sxapitest"
                     },
                     {
                         "path": "/s3store/:id",
                         "method": "POST",
-                        "resource_handler": "endpoints.addObject",
+                        "endpoint": "addObject",
                         "bucket": "sxapitest"
                     },
                     {
                         "path": "/s3store/:bid/:id",
                         "method": "GET",
-                        "resource_handler": "endpoints.getObject"
+                        "endpoint": "getObject"
                     },
                     {
                         "path": "/s3store/:bid/:id",
                         "method": "POST",
-                        "resource_handler": "endpoints.addObject"
+                        "endpoint": "addObject"
                     },
                     {
                         "path": "/s3store",
                         "method": "DELETE",
-                        "resource_handler": "endpoints.deleteObject"
+                        "endpoint": "deleteObject"
                     },
                     {
                         "path": "/s3store-bucket",
                         "method": "GET",
-                        "resource_handler": "endpoints.listBuckets",
+                        "endpoint": "listBuckets",
                         "config": {}
                     },
                     {
                         "path": "/s3store-bucket/:id",
                         "method": "POST",
-                        "resource_handler": "endpoints.addBucket",
+                        "endpoint": "addBucket",
                         "config": {}
                     },
                     {
                         "path": "/s3store-bucket/:id",
                         "method": "GET",
-                        "resource_handler": "endpoints.infoBucket",
+                        "endpoint": "infoBucket",
                         "config": {}
                     },
                     {
                         "path": "/s3store-bucket/:id",
                         "method": "DELETE",
-                        "resource_handler": "endpoints.deleteBucket",
+                        "endpoint": "deleteBucket",
                         "config": {}
                     }
                 ]
@@ -326,12 +326,12 @@
             {
                 "path": "/info",
                 "resource": "serviceinfo-sample",
-                "resource_handler": "endpoints.info"
+                "endpoint": "info"
             },
             {
                 "path": "/http",
                 "resource": "http-sample",
-                "resource_handler": "endpoints.call",
+                "endpoint": "call",
                 "url": "https://adobe.github.io/Spry/data/json/object-01.js"
             },
             {
@@ -342,33 +342,33 @@
                     {
                         "path": "/beer",
                         "method": "GET",
-                        "resource_handler": "endpoints.list",
+                        "endpoint": "list",
                         "n1ql": "SELECT * FROM `beer-sample` LIMIT 10"
                     },
                     {
                         "path": "/beer",
                         "method": "POST",
-                        "resource_handler": "endpoints.create"
+                        "endpoint": "create"
                     },
                     {
                         "path": "/beer/:id",
                         "method": "POST",
-                        "resource_handler": "endpoints.create"
+                        "endpoint": "create"
                     },
                     {
                         "path": "/beer/:id",
                         "method": "GET",
-                        "resource_handler": "endpoints.get"
+                        "endpoint": "get"
                     },
                     {
                         "path": "/beer/:id",
                         "method": "PUT",
-                        "resource_handler": "endpoints.update"
+                        "endpoint": "update"
                     },
                     {
                         "path": "/beer/:id",
                         "method": "DELETE",
-                        "resource_handler": "endpoints.delete"
+                        "endpoint": "delete"
                     }
                 ]
             },
@@ -380,27 +380,27 @@
                     {
                         "path": "/redis",
                         "method": "POST",
-                        "resource_handler": "endpoints.create"
+                        "endpoint": "create"
                     },
                     {
                         "path": "/redis/:id",
                         "method": "POST",
-                        "resource_handler": "endpoints.create"
+                        "endpoint": "create"
                     },
                     {
                         "path": "/redis/:id",
                         "method": "GET",
-                        "resource_handler": "endpoints.get"
+                        "endpoint": "get"
                     },
                     {
                         "path": "/redis/:id",
                         "method": "PUT",
-                        "resource_handler": "endpoints.update"
+                        "endpoint": "update"
                     },
                     {
                         "path": "/redis/:id",
                         "method": "DELETE",
-                        "resource_handler": "endpoints.delete"
+                        "endpoint": "delete"
                     }
                 ]
             },
@@ -414,28 +414,28 @@
                     {
                         "path": "/mysql",
                         "method": "GET",
-                        "resource_handler": "endpoints.list",
+                        "endpoint": "list",
                         "sql": "SELECT * FROM `composantes` LIMIT 10"
                     },
                     {
                         "path": "/mysql",
                         "method": "POST",
-                        "resource_handler": "endpoints.create"
+                        "endpoint": "create"
                     },
                     {
                         "path": "/mysql/:id",
                         "method": "GET",
-                        "resource_handler": "endpoints.get"
+                        "endpoint": "get"
                     },
                     {
                         "path": "/mysql/:id",
                         "method": "PUT",
-                        "resource_handler": "endpoints.update"
+                        "endpoint": "update"
                     },
                     {
                         "path": "/mysql/:id",
                         "method": "DELETE",
-                        "resource_handler": "endpoints.delete"
+                        "endpoint": "delete"
                     }
                 ]
             }

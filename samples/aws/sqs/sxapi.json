@@ -46,26 +46,26 @@
                     {
                         "path": "/queue",
                         "method": "GET",
-                        "resource_handler": "endpoints.listQueue",
+                        "endpoint": "listQueue",
                         "config": {}
                     },
                     {
                         "path": "/queue/:id",
                         "method": "POST",
-                        "resource_handler": "endpoints.addQueue",
+                        "endpoint": "addQueue",
                         "config": {}
                     },
                     {
                         "path": "/queue/:id",
                         "method": "DELETE",
-                        "resource_handler": "endpoints.deleteQueue",
+                        "endpoint": "deleteQueue",
                         "queueUrlPrefix": "https://sqs.eu-west-1.amazonaws.com/791728029433/",
                         "config": {}
                     },
                     {
                         "path": "/",
                         "method": "GET",
-                        "resource_handler": "endpoints.listMessages",
+                        "endpoint": "listMessages",
                         "config": {
                             "QueueUrl": "https://sqs.eu-west-1.amazonaws.com/791728029433/test"
                         }
@@ -73,12 +73,12 @@
                     {
                         "path": "/",
                         "method": "POST",
-                        "resource_handler": "endpoints.addMessage"
+                        "endpoint": "addMessage"
                     },
                     {
                         "path": "/",
                         "method": "DELETE",
-                        "resource_handler": "endpoints.deleteMessage",
+                        "endpoint": "deleteMessage",
                         "config": {
                             "QueueUrl": "https://sqs.eu-west-1.amazonaws.com/791728029433/test"
                         }
