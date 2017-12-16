@@ -1,5 +1,6 @@
-sxapi database example (couchbase)
-==================================
+<img align="right" height="50" src="https://raw.githubusercontent.com/startxfr/sxapi-core/dev/docs/assets/logo.svg?sanitize=true">
+
+# sxapi database example (couchbase)
 
 This section show you a sample config file for building a microservice 
 with a couchbase database backend. 

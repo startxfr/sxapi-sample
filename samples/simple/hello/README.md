@@ -1,5 +1,6 @@
-sxapi simple hello world example
-================================
+<img align="right" height="50" src="https://raw.githubusercontent.com/startxfr/sxapi-core/dev/docs/assets/logo.svg?sanitize=true">
+
+# sxapi simple hello world example
 
 This section show you a sample config file for building a simple microservice 
 with a hello world response. 

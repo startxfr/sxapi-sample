@@ -1,5 +1,6 @@
-sxapi simple json static example
-================================
+<img align="right" height="50" src="https://raw.githubusercontent.com/startxfr/sxapi-core/dev/docs/assets/logo.svg?sanitize=true">
+
+# sxapi simple json static example
 
 This section show you a sample config file for building a simple microservice 
 with a static json response. 

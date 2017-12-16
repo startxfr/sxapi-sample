@@ -1,5 +1,6 @@
-sxapi AWS example (S3)
-======================
+<img align="right" height="50" src="https://raw.githubusercontent.com/startxfr/sxapi-core/dev/docs/assets/logo.svg?sanitize=true">
+
+# sxapi AWS example (S3)
 
 This section show you a sample config file for building a microservice 
 with a AWS S3 backend. 
