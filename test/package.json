@@ -1,6 +1,6 @@
 {
   "name": "sxapi-sample-test",
-  "version": "0.0.18",
+  "version": "0.0.57",
   "description": "package for testing sxapi-sample config file for a simple ping",
   "author": "STARTX <dev+sxapi_core@startx.fr>",
   "license": "Apache-2.0",
@@ -10,7 +10,7 @@
     "start": "node app.js"
   },
   "dependencies": {
-    "sxapi-core": "~0.0.18"
+    "sxapi-core": "~0.0.57"
   },
   "devDependencies": {
     "mocha": "~3.4.2",

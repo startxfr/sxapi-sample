@@ -6,7 +6,7 @@ on databases backends.
 Theses samples must be used with 
 [sxapi-core framework](https://github.com/startxfr/sxapi-core) and you should
 read 
-[sxapi-core documentation](https://github.com/startxfr/sxapi-core/tree/v0.0.18-docker/docs) 
+[sxapi-core documentation](https://github.com/startxfr/sxapi-core/tree/v0.0.57-docker/docs) 
 before browsing this section 
 
 Example list
