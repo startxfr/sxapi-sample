@@ -33,3 +33,26 @@ follow the described steps to see the running sample
   - [full](full/) Configuration example using all features
   - [simple](simple/) Configuration examples using simple endpoints
   - [websocket](websocket/) Configuration example with websocket connection
+
+# Troubleshooting
+
+If you run into difficulties installing or running sxapi, you can [create an issue](https://github.com/startxfr/sxapi-core/issues/new).
+
+# Built With
+
+* [docker](https://www.docker.com/) - Container plateform
+* [alpine](https://alpinelinux.org/) - OS envelop
+* [nodejs](https://nodejs.org) - Application server
+* [express](http://expressjs.com) - Web framework
+
+# Contributing
+
+Read the [contributing guide](https://github.com/startxfr/sxapi-core/tree/dev/docs/guides/5.Contribute.md) for details on our code of conduct, and the process for submitting pull requests to us.
+
+# Authors
+
+This project is mainly developped by the [startx](https://www.startx.fr) dev team. You can see the complete list of contributors who participated in this project by reading [CONTRIBUTORS.md](https://github.com/startxfr/sxapi-core/tree/dev/docs/CONTRIBUTORS.md).
+
+# License
+
+This project is licensed under the GPL Version 3 - see the [LICENSE.md](https://github.com/startxfr/sxapi-core/tree/dev/docs/LICENSE.md) file for details
