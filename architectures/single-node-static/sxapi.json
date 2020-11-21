@@ -1,29 +1,18 @@
 {
     "name": "myservice",
-    "description": "",
+    "description": "my service",
     "version": "dev",
-    "debug": true,
-    "session": {},
-    "plugins": [
-    ],
-    "log": {
-        "filters": {
-            "level": "0,1,2,3,4",
-            "type": "debug,info,error,warn"
-        }
-    },
     "server": {
-        "type": "express",
-        "port": "8080",
-        "bodyParserJson": false,
-        "bodyParserUrl": true,
+        "static": true,
+        "static_path": "/static",
+        "static_dir": "/data",
         "endpoints": [
             {
                 "path": "/",
                 "header": {
                     "Content-Type": "text/plain"
                 },
-                "body": "my service"
+                "body": "my service. Go to /static to get data from volume"
             }
         ]
     }
