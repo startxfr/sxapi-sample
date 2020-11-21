@@ -1,5 +1,6 @@
-sxapi simples examples
-======================
+<img align="right" height="50" src="https://raw.githubusercontent.com/startxfr/sxapi-core/dev/docs/assets/logo.svg?sanitize=true">
+
+# sxapi simples examples
 
 This section show you some sample config file for building microservices based 
 on basic services. 

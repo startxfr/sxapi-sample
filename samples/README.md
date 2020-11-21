@@ -1,5 +1,6 @@
-Sample configuration files
-==========================
+<img align="right" height="50" src="https://raw.githubusercontent.com/startxfr/sxapi-core/dev/docs/assets/logo.svg?sanitize=true">
+
+# Sample configuration files
 
 This section show you some sample  config file and modules for starting your 
 microservice API. Theses samples must be used with 

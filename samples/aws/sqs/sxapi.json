@@ -37,7 +37,6 @@
         "bodyParserJson": true,
         "bodyParserUrl": true,
         "endpoints": [
-            
             {
                 "path": "/",
                 "method": "ROUTER",

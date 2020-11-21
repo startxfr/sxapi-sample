@@ -1,0 +1,19 @@
+{
+    "name": "myservice",
+    "description": "my service",
+    "version": "dev",
+    "server": {
+        "static": true,
+        "static_path": "/static",
+        "static_dir": "/data",
+        "endpoints": [
+            {
+                "path": "/",
+                "header": {
+                    "Content-Type": "text/plain"
+                },
+                "body": "my service. Go to /static to get data from volume"
+            }
+        ]
+    }
+}

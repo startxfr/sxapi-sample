@@ -1,5 +1,6 @@
-sxapi full example
-==================
+<img align="right" height="50" src="https://raw.githubusercontent.com/startxfr/sxapi-core/dev/docs/assets/logo.svg?sanitize=true">
+
+# sxapi full example
 
 This section show you a sample config file for building a microservice 
 based on various external service. 

@@ -1,0 +1,6 @@
+app:
+  image: startx/sxapi:0.0.76
+  container_name: "my-service"
+  volumes:
+    - "./static:/data:rw"
+    - "./sxapi.json:/conf/sxapi.json:ro"
