@@ -55,4 +55,4 @@ This project is mainly developped by the [startx](https://www.startx.fr) dev tea
 
 # License
 
-This project is licensed under the GPL Version 3 - see the [LICENSE.md](https://github.com/startxfr/sxapi-core/tree/dev/docs/LICENSE.md) file for details
+This project is licensed under the GPL Version 3 - see the [LICENSE](https://github.com/startxfr/sxapi-core/tree/dev/docs/LICENSE) file for details
